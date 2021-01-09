@@ -9,3 +9,4 @@ pytest-cov==2.9.0
 sphinxcontrib-napoleon
 nbsphinx
 recommonmark
+sphinx_rtd_theme

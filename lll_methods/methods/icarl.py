@@ -40,14 +40,14 @@ class Model(LLLMethodBase):
 
         Args:
             state_dicts (Dict[str, Dict]): a dictionary with the state dictionaries of this method, the optimizer, the
-                scheduler, and the values of the variables whose names are inside the self.method_variables
+            scheduler, and the values of the variables whose names are inside the self.method_variables
         """
         pass
 
     def _prepare_model_for_new_task(self, **kwargs) -> None:
         """
         A method specific function that takes place before the starting epoch of each new task (runs from the
-            prepare_model_for_task function).
+        prepare_model_for_task function).
         It copies the old network and freezes it's gradients.
         """
         self.old_net = copy_freeze(self.net)
@@ -120,7 +120,7 @@ class Model(LLLMethodBase):
     def _consolidate_epoch_knowledge(self, **kwargs) -> None:
         """
         A method specific function that takes place after training on each epoch (runs from the
-            consolidate_epoch_knowledge function)
+consolidate_epoch_knowledge function)
         """
         pass
 
@@ -187,7 +187,7 @@ class Buffer(BufferBase):
         Args:
             task_data (TorchLLLDataset): The new task data
             dist_args (Optional[Dict]): a dictionary of the distributed processing values in case of multiple gpu (ex:
-                rank of the device) (default: None)
+            rank of the device) (default: None)
             model (LLLMethodBase): The current method object to calculate the latent variables
             batch_size (int): The minibatch size
         """

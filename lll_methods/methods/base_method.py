@@ -97,7 +97,7 @@ class LLLMethodBase(ABC, nn.Module):
 
         Args:
             state_dicts (Dict[str, Dict]): a dictionary with the state dictionaries of this method, the optimizer, the
-                scheduler, and the values of the variables whose names are inside the self.method_variables
+            scheduler, and the values of the variables whose names are inside the self.method_variables
         """
         self._load_method_state_dict(state_dicts)
         keys = {'model_state_dict', 'optimizer_state_dict', 'scheduler_state_dict', 'method_variables'}
@@ -117,7 +117,7 @@ class LLLMethodBase(ABC, nn.Module):
 
         Args:
             state_dicts (Dict[str, Dict]): a dictionary with the state dictionaries of this method, the optimizer, the
-                scheduler, and the values of the variables whose names are inside the self.method_variables
+            scheduler, and the values of the variables whose names are inside the self.method_variables
         """
         pass
 
@@ -191,7 +191,7 @@ class LLLMethodBase(ABC, nn.Module):
         Args:
             task_data (Optional[TorchLLLDataset]): The new task data (default: None)
             dist_args (Optional[Dict]): a dictionary of the distributed processing values in case of multiple gpu (ex:
-                rank of the device) (default: None)
+            rank of the device) (default: None)
             **kwargs: arguments that are method specific
         """
         self.seen_classes = list(set(self.seen_classes) | set(task_data.cur_task))
@@ -227,7 +227,7 @@ class LLLMethodBase(ABC, nn.Module):
     def _consolidate_epoch_knowledge(self, **kwargs) -> None:
         """
         A method specific function that takes place after training on each epoch (runs from the
-            consolidate_epoch_knowledge function)
+        consolidate_epoch_knowledge function)
         This function needs to be defined in the inheriting method class
         """
         pass

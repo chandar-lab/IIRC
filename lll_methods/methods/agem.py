@@ -38,7 +38,7 @@ class Model(LLLMethodBase):
 
         Args:
             state_dicts (Dict[str, Dict]): a dictionary with the state dictionaries of this method, the optimizer, the
-                scheduler, and the values of the variables whose names are inside the self.method_variables
+            scheduler, and the values of the variables whose names are inside the self.method_variables
         """
         pass
 
@@ -46,14 +46,14 @@ class Model(LLLMethodBase):
                                     num_workers: int = 2, **kwargs) -> None:
         """
         A method specific function that takes place before the starting epoch of each new task (runs from the
-            prepare_model_for_task function).
+        prepare_model_for_task function).
         It checks if the buffer is not empty, and creates a dataloader for it, which is used later in getting the
             gradients of the loss on the buffer samples.
 
         Args:
             buffer (Optional[BufferBase]): The replay buffer (default: None)
             dist_args (Optional[Dict]): a dictionary of the distributed processing values in case of multiple gpu (ex:
-                rank of the device) (default: None)
+            rank of the device) (default: None)
             num_workers (int): The number of workers to use with the dataloader of the replay buffer (default: 2)
         """
         if dist_args is not None:
@@ -151,7 +151,7 @@ class Model(LLLMethodBase):
     def _consolidate_epoch_knowledge(self, **kwargs) -> None:
         """
         A method specific function that takes place after training on each epoch (runs from the
-            consolidate_epoch_knowledge function)
+        consolidate_epoch_knowledge function)
         """
         pass
 
@@ -185,7 +185,7 @@ class Buffer(BufferBase):
         Args:
             new_task_data (TorchLLLDataset): The new task data
             dist_args (Optional[Dict]): a dictionary of the distributed processing values in case of multiple gpu (ex:
-                rank of the device) (default: None)
+            rank of the device) (default: None)
         """
         distributed = dist_args is not None
         if distributed:

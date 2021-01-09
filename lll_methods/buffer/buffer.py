@@ -281,7 +281,7 @@ class BufferBase(ABC, data.Dataset):
         Args:
             new_task_data (TorchLLLDataset): The new task data
             dist_args (Optional[Dict]): a dictionary of the distributed processing values in case of multiple gpu (ex:
-                rank of the device) (default: None)
+            rank of the device) (default: None)
             **kwargs: arguments associated with each method
         """
         self.seen_classes = list(set(new_task_data.seen_classes) | set(self.seen_classes))
