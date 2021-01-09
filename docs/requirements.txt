@@ -6,3 +6,6 @@ Pillow==7.0.0
 lmdb==1.0.0
 pytest==5.4.3
 pytest-cov==2.9.0
+sphinxcontrib-napoleon
+nbsphinx
+recommonmark
