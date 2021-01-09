@@ -1,0 +1,1612 @@
+{
+  "configuration_0": {
+    "task_0": [
+      "flowers",
+      "small_mammals",
+      "trees",
+      "aquatic_mammals",
+      "fruit_and_vegetables",
+      "people",
+      "food_containers",
+      "vehicles",
+      "large_carnivores",
+      "insects"
+    ],
+    "task_1": [
+      "television",
+      "spider",
+      "shrew",
+      "mountain",
+      "hamster"
+    ],
+    "task_2": [
+      "road",
+      "poppy",
+      "household_furniture",
+      "woman",
+      "bee"
+    ],
+    "task_3": [
+      "tulip",
+      "clock",
+      "orange",
+      "beaver",
+      "rocket"
+    ],
+    "task_4": [
+      "bicycle",
+      "can",
+      "squirrel",
+      "wardrobe",
+      "bus"
+    ],
+    "task_5": [
+      "whale",
+      "sweet_pepper",
+      "telephone",
+      "leopard",
+      "bowl"
+    ],
+    "task_6": [
+      "skyscraper",
+      "baby",
+      "cockroach",
+      "boy",
+      "lobster"
+    ],
+    "task_7": [
+      "motorcycle",
+      "forest",
+      "tank",
+      "orchid",
+      "chair"
+    ],
+    "task_8": [
+      "crab",
+      "girl",
+      "keyboard",
+      "otter",
+      "bed"
+    ],
+    "task_9": [
+      "butterfly",
+      "lawn_mower",
+      "snail",
+      "caterpillar",
+      "wolf"
+    ],
+    "task_10": [
+      "pear",
+      "tiger",
+      "pickup_truck",
+      "cup",
+      "reptiles"
+    ],
+    "task_11": [
+      "train",
+      "sunflower",
+      "beetle",
+      "apple",
+      "palm_tree"
+    ],
+    "task_12": [
+      "plain",
+      "large_omnivores_and_herbivores",
+      "rose",
+      "tractor",
+      "crocodile"
+    ],
+    "task_13": [
+      "mushroom",
+      "couch",
+      "lamp",
+      "mouse",
+      "bridge"
+    ],
+    "task_14": [
+      "turtle",
+      "willow_tree",
+      "man",
+      "lizard",
+      "maple_tree"
+    ],
+    "task_15": [
+      "lion",
+      "elephant",
+      "seal",
+      "sea",
+      "dinosaur"
+    ],
+    "task_16": [
+      "worm",
+      "bear",
+      "castle",
+      "plate",
+      "dolphin"
+    ],
+    "task_17": [
+      "medium_sized_mammals",
+      "streetcar",
+      "bottle",
+      "kangaroo",
+      "snake"
+    ],
+    "task_18": [
+      "house",
+      "chimpanzee",
+      "raccoon",
+      "porcupine",
+      "oak_tree"
+    ],
+    "task_19": [
+      "pine_tree",
+      "possum",
+      "skunk",
+      "fish",
+      "fox"
+    ],
+    "task_20": [
+      "cattle",
+      "ray",
+      "aquarium_fish",
+      "cloud",
+      "flatfish"
+    ],
+    "task_21": [
+      "rabbit",
+      "trout",
+      "camel",
+      "table",
+      "shark"
+    ]
+  },
+  "configuration_1": {
+    "task_0": [
+      "trees",
+      "insects",
+      "food_containers",
+      "large_carnivores",
+      "flowers",
+      "small_mammals",
+      "reptiles",
+      "household_furniture",
+      "people",
+      "fish"
+    ],
+    "task_1": [
+      "wardrobe",
+      "flatfish",
+      "dinosaur",
+      "boy",
+      "shrew"
+    ],
+    "task_2": [
+      "forest",
+      "bed",
+      "tulip",
+      "oak_tree",
+      "ray"
+    ],
+    "task_3": [
+      "maple_tree",
+      "bee",
+      "rose",
+      "caterpillar",
+      "aquarium_fish"
+    ],
+    "task_4": [
+      "baby",
+      "lawn_mower",
+      "wolf",
+      "rocket",
+      "table"
+    ],
+    "task_5": [
+      "large_omnivores_and_herbivores",
+      "rabbit",
+      "bridge",
+      "shark",
+      "telephone"
+    ],
+    "task_6": [
+      "skyscraper",
+      "spider",
+      "can",
+      "chimpanzee",
+      "lobster"
+    ],
+    "task_7": [
+      "medium_sized_mammals",
+      "camel",
+      "turtle",
+      "plain",
+      "mouse"
+    ],
+    "task_8": [
+      "tiger",
+      "chair",
+      "snail",
+      "sunflower",
+      "man"
+    ],
+    "task_9": [
+      "road",
+      "trout",
+      "television",
+      "raccoon",
+      "elephant"
+    ],
+    "task_10": [
+      "clock",
+      "plate",
+      "lamp",
+      "snake",
+      "keyboard"
+    ],
+    "task_11": [
+      "mountain",
+      "willow_tree",
+      "bottle",
+      "house",
+      "possum"
+    ],
+    "task_12": [
+      "butterfly",
+      "crocodile",
+      "orchid",
+      "vehicles",
+      "squirrel"
+    ],
+    "task_13": [
+      "fruit_and_vegetables",
+      "pine_tree",
+      "kangaroo",
+      "palm_tree",
+      "streetcar"
+    ],
+    "task_14": [
+      "woman",
+      "skunk",
+      "tractor",
+      "bus",
+      "lizard"
+    ],
+    "task_15": [
+      "couch",
+      "orange",
+      "girl",
+      "beetle",
+      "cup"
+    ],
+    "task_16": [
+      "castle",
+      "motorcycle",
+      "bicycle",
+      "pear",
+      "cloud"
+    ],
+    "task_17": [
+      "porcupine",
+      "fox",
+      "worm",
+      "poppy",
+      "cattle"
+    ],
+    "task_18": [
+      "train",
+      "tank",
+      "apple",
+      "bowl",
+      "aquatic_mammals"
+    ],
+    "task_19": [
+      "whale",
+      "leopard",
+      "bear",
+      "seal",
+      "lion"
+    ],
+    "task_20": [
+      "cockroach",
+      "sweet_pepper",
+      "hamster",
+      "otter",
+      "crab"
+    ],
+    "task_21": [
+      "sea",
+      "beaver",
+      "dolphin",
+      "pickup_truck",
+      "mushroom"
+    ]
+  },
+  "configuration_2": {
+    "task_0": [
+      "small_mammals",
+      "flowers",
+      "aquatic_mammals",
+      "reptiles",
+      "fruit_and_vegetables",
+      "food_containers",
+      "large_carnivores",
+      "fish",
+      "household_furniture",
+      "people"
+    ],
+    "task_1": [
+      "wolf",
+      "plain",
+      "vehicles",
+      "chair",
+      "clock"
+    ],
+    "task_2": [
+      "couch",
+      "spider",
+      "lion",
+      "sea",
+      "tank"
+    ],
+    "task_3": [
+      "tulip",
+      "rocket",
+      "squirrel",
+      "pear",
+      "house"
+    ],
+    "task_4": [
+      "telephone",
+      "mountain",
+      "road",
+      "crocodile",
+      "rabbit"
+    ],
+    "task_5": [
+      "dolphin",
+      "dinosaur",
+      "lobster",
+      "shark",
+      "lizard"
+    ],
+    "task_6": [
+      "boy",
+      "trees",
+      "streetcar",
+      "bridge",
+      "orchid"
+    ],
+    "task_7": [
+      "maple_tree",
+      "lawn_mower",
+      "cup",
+      "sunflower",
+      "seal"
+    ],
+    "task_8": [
+      "turtle",
+      "baby",
+      "wardrobe",
+      "snail",
+      "castle"
+    ],
+    "task_9": [
+      "lamp",
+      "leopard",
+      "motorcycle",
+      "crab",
+      "pickup_truck"
+    ],
+    "task_10": [
+      "mouse",
+      "bowl",
+      "bicycle",
+      "insects",
+      "woman"
+    ],
+    "task_11": [
+      "palm_tree",
+      "large_omnivores_and_herbivores",
+      "apple",
+      "beaver",
+      "bee"
+    ],
+    "task_12": [
+      "mushroom",
+      "forest",
+      "hamster",
+      "beetle",
+      "elephant"
+    ],
+    "task_13": [
+      "poppy",
+      "girl",
+      "pine_tree",
+      "television",
+      "worm"
+    ],
+    "task_14": [
+      "cattle",
+      "plate",
+      "oak_tree",
+      "tiger",
+      "chimpanzee"
+    ],
+    "task_15": [
+      "train",
+      "caterpillar",
+      "otter",
+      "ray",
+      "flatfish"
+    ],
+    "task_16": [
+      "table",
+      "shrew",
+      "bus",
+      "sweet_pepper",
+      "snake"
+    ],
+    "task_17": [
+      "cloud",
+      "rose",
+      "keyboard",
+      "cockroach",
+      "medium_sized_mammals"
+    ],
+    "task_18": [
+      "fox",
+      "possum",
+      "skunk",
+      "bottle",
+      "bed"
+    ],
+    "task_19": [
+      "tractor",
+      "aquarium_fish",
+      "porcupine",
+      "whale",
+      "orange"
+    ],
+    "task_20": [
+      "raccoon",
+      "can",
+      "kangaroo",
+      "camel",
+      "willow_tree"
+    ],
+    "task_21": [
+      "bear",
+      "skyscraper",
+      "man",
+      "trout",
+      "butterfly"
+    ]
+  },
+  "configuration_3": {
+    "task_0": [
+      "medium_sized_mammals",
+      "aquatic_mammals",
+      "trees",
+      "flowers",
+      "large_omnivores_and_herbivores",
+      "fruit_and_vegetables",
+      "vehicles",
+      "insects",
+      "large_carnivores",
+      "reptiles"
+    ],
+    "task_1": [
+      "porcupine",
+      "whale",
+      "lamp",
+      "food_containers",
+      "rose"
+    ],
+    "task_2": [
+      "cup",
+      "dinosaur",
+      "bear",
+      "pine_tree",
+      "lobster"
+    ],
+    "task_3": [
+      "skyscraper",
+      "crab",
+      "butterfly",
+      "train",
+      "beetle"
+    ],
+    "task_4": [
+      "cattle",
+      "leopard",
+      "turtle",
+      "bee",
+      "raccoon"
+    ],
+    "task_5": [
+      "clock",
+      "spider",
+      "beaver",
+      "people",
+      "lawn_mower"
+    ],
+    "task_6": [
+      "sea",
+      "camel",
+      "can",
+      "rocket",
+      "pickup_truck"
+    ],
+    "task_7": [
+      "kangaroo",
+      "tulip",
+      "crocodile",
+      "dolphin",
+      "bridge"
+    ],
+    "task_8": [
+      "cockroach",
+      "oak_tree",
+      "skunk",
+      "plate",
+      "fish"
+    ],
+    "task_9": [
+      "motorcycle",
+      "sunflower",
+      "house",
+      "keyboard",
+      "ray"
+    ],
+    "task_10": [
+      "palm_tree",
+      "tractor",
+      "possum",
+      "streetcar",
+      "willow_tree"
+    ],
+    "task_11": [
+      "telephone",
+      "tank",
+      "castle",
+      "maple_tree",
+      "cloud"
+    ],
+    "task_12": [
+      "trout",
+      "bowl",
+      "plain",
+      "lizard",
+      "forest"
+    ],
+    "task_13": [
+      "baby",
+      "flatfish",
+      "road",
+      "seal",
+      "caterpillar"
+    ],
+    "task_14": [
+      "snail",
+      "sweet_pepper",
+      "otter",
+      "household_furniture",
+      "bottle"
+    ],
+    "task_15": [
+      "boy",
+      "man",
+      "girl",
+      "table",
+      "small_mammals"
+    ],
+    "task_16": [
+      "woman",
+      "rabbit",
+      "television",
+      "mountain",
+      "snake"
+    ],
+    "task_17": [
+      "aquarium_fish",
+      "hamster",
+      "orange",
+      "bus",
+      "bed"
+    ],
+    "task_18": [
+      "apple",
+      "chair",
+      "fox",
+      "chimpanzee",
+      "shrew"
+    ],
+    "task_19": [
+      "shark",
+      "poppy",
+      "couch",
+      "orchid",
+      "squirrel"
+    ],
+    "task_20": [
+      "elephant",
+      "worm",
+      "lion",
+      "bicycle",
+      "tiger"
+    ],
+    "task_21": [
+      "wardrobe",
+      "mushroom",
+      "pear",
+      "wolf",
+      "mouse"
+    ]
+  },
+  "configuration_4": {
+    "task_0": [
+      "vehicles",
+      "flowers",
+      "large_carnivores",
+      "medium_sized_mammals",
+      "small_mammals",
+      "large_omnivores_and_herbivores",
+      "trees",
+      "fruit_and_vegetables",
+      "fish",
+      "food_containers"
+    ],
+    "task_1": [
+      "motorcycle",
+      "train",
+      "skyscraper",
+      "mountain",
+      "possum"
+    ],
+    "task_2": [
+      "tractor",
+      "bear",
+      "reptiles",
+      "mushroom",
+      "keyboard"
+    ],
+    "task_3": [
+      "pine_tree",
+      "palm_tree",
+      "road",
+      "cattle",
+      "can"
+    ],
+    "task_4": [
+      "castle",
+      "lamp",
+      "kangaroo",
+      "sweet_pepper",
+      "pickup_truck"
+    ],
+    "task_5": [
+      "bowl",
+      "apple",
+      "rose",
+      "crocodile",
+      "house"
+    ],
+    "task_6": [
+      "plain",
+      "snake",
+      "tiger",
+      "sea",
+      "rabbit"
+    ],
+    "task_7": [
+      "orchid",
+      "streetcar",
+      "forest",
+      "shrew",
+      "hamster"
+    ],
+    "task_8": [
+      "poppy",
+      "aquarium_fish",
+      "bottle",
+      "chimpanzee",
+      "bridge"
+    ],
+    "task_9": [
+      "mouse",
+      "oak_tree",
+      "telephone",
+      "elephant",
+      "aquatic_mammals"
+    ],
+    "task_10": [
+      "tulip",
+      "lizard",
+      "willow_tree",
+      "lawn_mower",
+      "bicycle"
+    ],
+    "task_11": [
+      "fox",
+      "beaver",
+      "camel",
+      "skunk",
+      "clock"
+    ],
+    "task_12": [
+      "otter",
+      "cup",
+      "turtle",
+      "maple_tree",
+      "wolf"
+    ],
+    "task_13": [
+      "raccoon",
+      "squirrel",
+      "pear",
+      "people",
+      "snail"
+    ],
+    "task_14": [
+      "woman",
+      "worm",
+      "crab",
+      "leopard",
+      "insects"
+    ],
+    "task_15": [
+      "plate",
+      "seal",
+      "bee",
+      "lobster",
+      "trout"
+    ],
+    "task_16": [
+      "dolphin",
+      "spider",
+      "shark",
+      "tank",
+      "porcupine"
+    ],
+    "task_17": [
+      "household_furniture",
+      "cockroach",
+      "ray",
+      "butterfly",
+      "whale"
+    ],
+    "task_18": [
+      "table",
+      "cloud",
+      "chair",
+      "baby",
+      "dinosaur"
+    ],
+    "task_19": [
+      "orange",
+      "boy",
+      "bed",
+      "girl",
+      "rocket"
+    ],
+    "task_20": [
+      "television",
+      "sunflower",
+      "beetle",
+      "flatfish",
+      "wardrobe"
+    ],
+    "task_21": [
+      "bus",
+      "couch",
+      "man",
+      "caterpillar",
+      "lion"
+    ]
+  },
+  "configuration_5": {
+    "task_0": [
+      "flowers",
+      "small_mammals",
+      "insects",
+      "fruit_and_vegetables",
+      "people",
+      "large_carnivores",
+      "fish",
+      "household_furniture",
+      "trees",
+      "vehicles"
+    ],
+    "task_1": [
+      "pickup_truck",
+      "train",
+      "mouse",
+      "apple",
+      "bed"
+    ],
+    "task_2": [
+      "rose",
+      "spider",
+      "motorcycle",
+      "girl",
+      "lobster"
+    ],
+    "task_3": [
+      "keyboard",
+      "oak_tree",
+      "chair",
+      "medium_sized_mammals",
+      "streetcar"
+    ],
+    "task_4": [
+      "maple_tree",
+      "orchid",
+      "wardrobe",
+      "lawn_mower",
+      "wolf"
+    ],
+    "task_5": [
+      "willow_tree",
+      "reptiles",
+      "sea",
+      "skunk",
+      "hamster"
+    ],
+    "task_6": [
+      "pear",
+      "trout",
+      "crocodile",
+      "food_containers",
+      "television"
+    ],
+    "task_7": [
+      "woman",
+      "ray",
+      "skyscraper",
+      "table",
+      "fox"
+    ],
+    "task_8": [
+      "shark",
+      "leopard",
+      "mountain",
+      "cup",
+      "can"
+    ],
+    "task_9": [
+      "orange",
+      "flatfish",
+      "mushroom",
+      "plate",
+      "road"
+    ],
+    "task_10": [
+      "house",
+      "lizard",
+      "snake",
+      "boy",
+      "caterpillar"
+    ],
+    "task_11": [
+      "baby",
+      "snail",
+      "dinosaur",
+      "telephone",
+      "forest"
+    ],
+    "task_12": [
+      "beetle",
+      "tank",
+      "lion",
+      "cockroach",
+      "turtle"
+    ],
+    "task_13": [
+      "castle",
+      "rocket",
+      "couch",
+      "large_omnivores_and_herbivores",
+      "poppy"
+    ],
+    "task_14": [
+      "tractor",
+      "butterfly",
+      "camel",
+      "sweet_pepper",
+      "bus"
+    ],
+    "task_15": [
+      "kangaroo",
+      "bear",
+      "palm_tree",
+      "pine_tree",
+      "worm"
+    ],
+    "task_16": [
+      "shrew",
+      "bridge",
+      "rabbit",
+      "chimpanzee",
+      "bicycle"
+    ],
+    "task_17": [
+      "raccoon",
+      "elephant",
+      "plain",
+      "squirrel",
+      "bee"
+    ],
+    "task_18": [
+      "man",
+      "clock",
+      "sunflower",
+      "crab",
+      "porcupine"
+    ],
+    "task_19": [
+      "lamp",
+      "possum",
+      "aquatic_mammals",
+      "tulip",
+      "bowl"
+    ],
+    "task_20": [
+      "cattle",
+      "cloud",
+      "aquarium_fish",
+      "tiger",
+      "bottle"
+    ],
+    "task_21": [
+      "beaver",
+      "dolphin",
+      "whale",
+      "otter",
+      "seal"
+    ]
+  },
+  "configuration_6": {
+    "task_0": [
+      "flowers",
+      "aquatic_mammals",
+      "fruit_and_vegetables",
+      "medium_sized_mammals",
+      "fish",
+      "people",
+      "household_furniture",
+      "vehicles",
+      "insects",
+      "small_mammals"
+    ],
+    "task_1": [
+      "rocket",
+      "ray",
+      "squirrel",
+      "reptiles",
+      "beetle"
+    ],
+    "task_2": [
+      "porcupine",
+      "otter",
+      "plain",
+      "pear",
+      "mouse"
+    ],
+    "task_3": [
+      "flatfish",
+      "forest",
+      "motorcycle",
+      "road",
+      "sweet_pepper"
+    ],
+    "task_4": [
+      "seal",
+      "orange",
+      "rabbit",
+      "streetcar",
+      "sea"
+    ],
+    "task_5": [
+      "man",
+      "boy",
+      "mountain",
+      "baby",
+      "raccoon"
+    ],
+    "task_6": [
+      "woman",
+      "lawn_mower",
+      "spider",
+      "bed",
+      "couch"
+    ],
+    "task_7": [
+      "large_omnivores_and_herbivores",
+      "orchid",
+      "trees",
+      "large_carnivores",
+      "crab"
+    ],
+    "task_8": [
+      "aquarium_fish",
+      "hamster",
+      "pickup_truck",
+      "crocodile",
+      "pine_tree"
+    ],
+    "task_9": [
+      "possum",
+      "turtle",
+      "camel",
+      "maple_tree",
+      "whale"
+    ],
+    "task_10": [
+      "tractor",
+      "skyscraper",
+      "house",
+      "mushroom",
+      "bridge"
+    ],
+    "task_11": [
+      "kangaroo",
+      "poppy",
+      "keyboard",
+      "fox",
+      "apple"
+    ],
+    "task_12": [
+      "food_containers",
+      "dinosaur",
+      "trout",
+      "chimpanzee",
+      "oak_tree"
+    ],
+    "task_13": [
+      "bottle",
+      "cattle",
+      "tulip",
+      "beaver",
+      "bee"
+    ],
+    "task_14": [
+      "shark",
+      "tank",
+      "willow_tree",
+      "clock",
+      "cloud"
+    ],
+    "task_15": [
+      "bus",
+      "leopard",
+      "chair",
+      "girl",
+      "worm"
+    ],
+    "task_16": [
+      "lamp",
+      "television",
+      "sunflower",
+      "butterfly",
+      "bicycle"
+    ],
+    "task_17": [
+      "train",
+      "telephone",
+      "snake",
+      "bear",
+      "plate"
+    ],
+    "task_18": [
+      "can",
+      "elephant",
+      "wardrobe",
+      "caterpillar",
+      "skunk"
+    ],
+    "task_19": [
+      "rose",
+      "cup",
+      "wolf",
+      "lobster",
+      "table"
+    ],
+    "task_20": [
+      "bowl",
+      "castle",
+      "dolphin",
+      "cockroach",
+      "shrew"
+    ],
+    "task_21": [
+      "snail",
+      "palm_tree",
+      "lion",
+      "lizard",
+      "tiger"
+    ]
+  },
+  "configuration_7": {
+    "task_0": [
+      "vehicles",
+      "aquatic_mammals",
+      "fruit_and_vegetables",
+      "fish",
+      "insects",
+      "trees",
+      "people",
+      "small_mammals",
+      "flowers",
+      "large_omnivores_and_herbivores"
+    ],
+    "task_1": [
+      "reptiles",
+      "cloud",
+      "trout",
+      "motorcycle",
+      "clock"
+    ],
+    "task_2": [
+      "pickup_truck",
+      "lobster",
+      "butterfly",
+      "large_carnivores",
+      "bear"
+    ],
+    "task_3": [
+      "rabbit",
+      "rocket",
+      "ray",
+      "cattle",
+      "shark"
+    ],
+    "task_4": [
+      "plain",
+      "castle",
+      "tank",
+      "squirrel",
+      "dolphin"
+    ],
+    "task_5": [
+      "chimpanzee",
+      "pine_tree",
+      "beetle",
+      "household_furniture",
+      "mushroom"
+    ],
+    "task_6": [
+      "mouse",
+      "wolf",
+      "lawn_mower",
+      "bed",
+      "cockroach"
+    ],
+    "task_7": [
+      "house",
+      "television",
+      "poppy",
+      "willow_tree",
+      "camel"
+    ],
+    "task_8": [
+      "man",
+      "maple_tree",
+      "orchid",
+      "streetcar",
+      "hamster"
+    ],
+    "task_9": [
+      "caterpillar",
+      "beaver",
+      "bicycle",
+      "snail",
+      "lamp"
+    ],
+    "task_10": [
+      "sea",
+      "food_containers",
+      "leopard",
+      "sunflower",
+      "tulip"
+    ],
+    "task_11": [
+      "rose",
+      "lizard",
+      "train",
+      "crocodile",
+      "bottle"
+    ],
+    "task_12": [
+      "couch",
+      "seal",
+      "snake",
+      "keyboard",
+      "table"
+    ],
+    "task_13": [
+      "pear",
+      "road",
+      "chair",
+      "orange",
+      "aquarium_fish"
+    ],
+    "task_14": [
+      "oak_tree",
+      "turtle",
+      "forest",
+      "bus",
+      "medium_sized_mammals"
+    ],
+    "task_15": [
+      "apple",
+      "worm",
+      "raccoon",
+      "sweet_pepper",
+      "elephant"
+    ],
+    "task_16": [
+      "plate",
+      "baby",
+      "shrew",
+      "bowl",
+      "dinosaur"
+    ],
+    "task_17": [
+      "lion",
+      "kangaroo",
+      "mountain",
+      "whale",
+      "girl"
+    ],
+    "task_18": [
+      "porcupine",
+      "fox",
+      "boy",
+      "flatfish",
+      "palm_tree"
+    ],
+    "task_19": [
+      "wardrobe",
+      "otter",
+      "spider",
+      "crab",
+      "bridge"
+    ],
+    "task_20": [
+      "bee",
+      "can",
+      "tractor",
+      "telephone",
+      "possum"
+    ],
+    "task_21": [
+      "cup",
+      "skyscraper",
+      "woman",
+      "skunk",
+      "tiger"
+    ]
+  },
+  "configuration_8": {
+    "task_0": [
+      "insects",
+      "large_carnivores",
+      "medium_sized_mammals",
+      "fish",
+      "trees",
+      "flowers",
+      "food_containers",
+      "large_omnivores_and_herbivores",
+      "fruit_and_vegetables",
+      "aquatic_mammals"
+    ],
+    "task_1": [
+      "bottle",
+      "skyscraper",
+      "people",
+      "rose",
+      "keyboard"
+    ],
+    "task_2": [
+      "pear",
+      "skunk",
+      "possum",
+      "mountain",
+      "kangaroo"
+    ],
+    "task_3": [
+      "leopard",
+      "apple",
+      "worm",
+      "forest",
+      "elephant"
+    ],
+    "task_4": [
+      "maple_tree",
+      "sea",
+      "flatfish",
+      "baby",
+      "raccoon"
+    ],
+    "task_5": [
+      "spider",
+      "orange",
+      "wolf",
+      "seal",
+      "porcupine"
+    ],
+    "task_6": [
+      "sunflower",
+      "tiger",
+      "small_mammals",
+      "television",
+      "road"
+    ],
+    "task_7": [
+      "tulip",
+      "bear",
+      "man",
+      "crab",
+      "palm_tree"
+    ],
+    "task_8": [
+      "sweet_pepper",
+      "mushroom",
+      "beaver",
+      "poppy",
+      "plain"
+    ],
+    "task_9": [
+      "rabbit",
+      "lion",
+      "woman",
+      "whale",
+      "plate"
+    ],
+    "task_10": [
+      "can",
+      "household_furniture",
+      "orchid",
+      "butterfly",
+      "vehicles"
+    ],
+    "task_11": [
+      "streetcar",
+      "bicycle",
+      "otter",
+      "couch",
+      "rocket"
+    ],
+    "task_12": [
+      "motorcycle",
+      "pickup_truck",
+      "dolphin",
+      "cup",
+      "shark"
+    ],
+    "task_13": [
+      "bridge",
+      "cockroach",
+      "girl",
+      "bed",
+      "fox"
+    ],
+    "task_14": [
+      "mouse",
+      "train",
+      "camel",
+      "clock",
+      "cloud"
+    ],
+    "task_15": [
+      "bee",
+      "trout",
+      "cattle",
+      "wardrobe",
+      "beetle"
+    ],
+    "task_16": [
+      "pine_tree",
+      "bowl",
+      "hamster",
+      "lobster",
+      "willow_tree"
+    ],
+    "task_17": [
+      "lamp",
+      "oak_tree",
+      "lawn_mower",
+      "chair",
+      "squirrel"
+    ],
+    "task_18": [
+      "shrew",
+      "tank",
+      "bus",
+      "ray",
+      "chimpanzee"
+    ],
+    "task_19": [
+      "snail",
+      "aquarium_fish",
+      "boy",
+      "tractor",
+      "castle"
+    ],
+    "task_20": [
+      "house",
+      "caterpillar",
+      "table",
+      "telephone",
+      "reptiles"
+    ],
+    "task_21": [
+      "lizard",
+      "turtle",
+      "dinosaur",
+      "crocodile",
+      "snake"
+    ]
+  },
+  "configuration_9": {
+    "task_0": [
+      "insects",
+      "fish",
+      "household_furniture",
+      "small_mammals",
+      "aquatic_mammals",
+      "medium_sized_mammals",
+      "people",
+      "flowers",
+      "trees",
+      "fruit_and_vegetables"
+    ],
+    "task_1": [
+      "beaver",
+      "pine_tree",
+      "snail",
+      "food_containers",
+      "baby"
+    ],
+    "task_2": [
+      "boy",
+      "rocket",
+      "woman",
+      "table",
+      "television"
+    ],
+    "task_3": [
+      "worm",
+      "dolphin",
+      "willow_tree",
+      "road",
+      "porcupine"
+    ],
+    "task_4": [
+      "plain",
+      "cloud",
+      "keyboard",
+      "skyscraper",
+      "butterfly"
+    ],
+    "task_5": [
+      "skunk",
+      "pear",
+      "hamster",
+      "man",
+      "can"
+    ],
+    "task_6": [
+      "squirrel",
+      "large_omnivores_and_herbivores",
+      "ray",
+      "rose",
+      "spider"
+    ],
+    "task_7": [
+      "cockroach",
+      "telephone",
+      "clock",
+      "tulip",
+      "large_carnivores"
+    ],
+    "task_8": [
+      "kangaroo",
+      "castle",
+      "house",
+      "beetle",
+      "lawn_mower"
+    ],
+    "task_9": [
+      "shrew",
+      "maple_tree",
+      "rabbit",
+      "seal",
+      "possum"
+    ],
+    "task_10": [
+      "forest",
+      "lion",
+      "lobster",
+      "couch",
+      "bridge"
+    ],
+    "task_11": [
+      "chair",
+      "reptiles",
+      "flatfish",
+      "cup",
+      "wolf"
+    ],
+    "task_12": [
+      "sweet_pepper",
+      "elephant",
+      "dinosaur",
+      "bed",
+      "snake"
+    ],
+    "task_13": [
+      "vehicles",
+      "wardrobe",
+      "camel",
+      "whale",
+      "sunflower"
+    ],
+    "task_14": [
+      "pickup_truck",
+      "mountain",
+      "palm_tree",
+      "apple",
+      "cattle"
+    ],
+    "task_15": [
+      "tractor",
+      "oak_tree",
+      "sea",
+      "bus",
+      "poppy"
+    ],
+    "task_16": [
+      "crocodile",
+      "tiger",
+      "turtle",
+      "girl",
+      "orange"
+    ],
+    "task_17": [
+      "fox",
+      "mushroom",
+      "streetcar",
+      "trout",
+      "caterpillar"
+    ],
+    "task_18": [
+      "shark",
+      "tank",
+      "raccoon",
+      "otter",
+      "bottle"
+    ],
+    "task_19": [
+      "motorcycle",
+      "plate",
+      "crab",
+      "bicycle",
+      "train"
+    ],
+    "task_20": [
+      "bear",
+      "lamp",
+      "lizard",
+      "aquarium_fish",
+      "orchid"
+    ],
+    "task_21": [
+      "leopard",
+      "bee",
+      "chimpanzee",
+      "mouse",
+      "bowl"
+    ]
+  }
+}

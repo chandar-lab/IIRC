@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iirc.lll_datasets_loader module &#8212; IIRC 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lll_methods package" href="lll_methods.html" />
+    <link rel="prev" title="iirc.iirc_definitions module" href="iirc.iirc_definitions.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-iirc.lll_datasets_loader">
+<span id="iirc-lll-datasets-loader-module"></span><h1>iirc.lll_datasets_loader module<a class="headerlink" href="#module-iirc.lll_datasets_loader" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="iirc.lll_datasets_loader.get_lll_datasets">
+<code class="sig-prename descclassname">iirc.lll_datasets_loader.</code><code class="sig-name descname">get_lll_datasets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataset_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">dataset_root</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'./data'</span></em>, <em class="sig-param"><span class="n">setup</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'IIRC'</span></em>, <em class="sig-param"><span class="n">framework</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'PyTorch'</span></em>, <em class="sig-param"><span class="n">tasks_configuration_id</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_images</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">joint</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="iirc.lll_dataset.lll_dataset.html#iirc.lll_dataset.lll_dataset.LLLDatasetBase" title="iirc.lll_dataset.lll_dataset.LLLDatasetBase">iirc.lll_dataset.lll_dataset.LLLDatasetBase</a><span class="p">]</span><span class="p">, </span>List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#iirc.lll_datasets_loader.get_lll_datasets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the incremental refinement learning , as well as the tasks (which contains the classes introduced at each task),
+and the index for each class corresponding to its order of appearance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> (<em>str</em>) – The name of the dataset, ex: iirc_cifar100</p></li>
+<li><p><strong>dataset_root</strong> (<em>str</em>) – The directory where the dataset is/will be downloaded (default: “./data”)</p></li>
+<li><p><strong>setup</strong> (<em>str</em>) – Class Incremental Learning setup (CIL) or Incremental Implicitly Refined Classification setup
+(IIRC) (default: IIRC_SETUP)</p></li>
+<li><p><strong>framework</strong> (<em>str</em>) – The framework to be used, whether PyTorch or Tensorflow. use Tensorflow for any numpy based
+dataloading  (default: PYTORCH)</p></li>
+<li><p><strong>tasks_configuration_id</strong> (<em>int</em>) – The configuration id, where each configuration corresponds to a specific tasks and
+classes order for each dataset. This id starts from 0 for each dataset. Ignore when joint is set to True
+(default: 0)</p></li>
+<li><p><strong>essential_transforms_fn</strong> (<em>Optional</em><em>[</em><em>Callable</em><em>[</em><em>[</em><em>Image.Image</em><em>]</em><em>, </em><em>Any</em><em>]</em><em>]</em>) – A function that contains the essential
+transforms (for example, converting a pillow image to a tensor) that should be applied to each image. This
+function is applied only when the augmentation_transforms_fn is set to None (as in the case of a test set)
+or inside the disable_augmentations context (default: None)</p></li>
+<li><p><strong>augmentation_transforms_fn</strong> – A function that contains the essential transforms (for example, converting a pillow
+image to a tensor) and augmentation transforms (for example, applying random cropping) that should be
+applied to each image. When this function is provided, essential_transforms_fn is not used except inside the
+disable_augmentations context (default: None)</p></li>
+<li><p><strong>cache_images</strong> (<em>bool</em>) – cache images that belong to the current task in the memory, only applicable when using the
+image path (default: False)</p></li>
+<li><p><strong>joint</strong> (<em>bool</em>) – provided all the classes in a single task for joint training (default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>lll_datasets (Dict[str, LLLDatasetBase]): a dictionary with the keys corresponding to the four splits (train,
+intask_validation, posttask_validation, test), and the values containing the dataset object inheriting from
+LLLDatasetBase for that split.</p>
+<p>tasks (List[List[str]]): a list of lists where each inner list contains the set of classes (class names) that
+will be introduced in that task (example: [[dog, cat, car], [tiger, truck, fish]]).</p>
+<p>class_names_to_idx (Dict[str, int]): a dictionary with the class name as key, and the class index as value
+(example: {“dog”: 0, “cat”: 1, …}).</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[Dict[str, <a class="reference internal" href="iirc.lll_dataset.lll_dataset.html#iirc.lll_dataset.lll_dataset.LLLDatasetBase" title="iirc.lll_dataset.lll_dataset.LLLDatasetBase">LLLDatasetBase</a>], List[List[str]], Dict[str, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="iirc.lll_datasets_loader._get_dataset">
+<code class="sig-prename descclassname">iirc.lll_datasets_loader.</code><code class="sig-name descname">_get_dataset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataset_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">dataset_root</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span>List<span class="p">[</span>Tuple<span class="p">[</span>PIL.Image.Image<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>Dict<span class="p">]</span><a class="headerlink" href="#iirc.lll_datasets_loader._get_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the dataset using the DatasetTypeStruct structure and loads the dataset configuration (the
+superclass_data_pct, intask_valid_train_ratio, etc, for that specific dataset)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> (<em>str</em>) – The name of the dataset, ex: iirc_cifar100</p></li>
+<li><p><strong>dataset_root</strong> (<em>str</em>) – The directory where the dataset is/will be downloaded</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>datasets (Dict[str, DatasetStructType]): a dictionary with the keys corresponding to the four splits (train,
+intask_validation, posttask_validation, test), and the values being a list of the samples that belong to
+each split (with the images or images paths) in the DatasetTypeStruct structure
+dataset_configuration (Dict): a dictionary with the configuration corresponding to this dataset (the
+superclass_data_pct, intask_valid_train_ratio, etc)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[Dict[str, DatasetStructType], Dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="iirc.lll_datasets_loader._load_iirc_cifar100">
+<code class="sig-prename descclassname">iirc.lll_datasets_loader.</code><code class="sig-name descname">_load_iirc_cifar100</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">root</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'.'</span></em>, <em class="sig-param"><span class="n">intask_valid_train_ratio</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.1</span></em>, <em class="sig-param"><span class="n">posttask_valid_train_ratio</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.1</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span>List<span class="p">[</span>Tuple<span class="p">[</span>PIL.Image.Image<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#iirc.lll_datasets_loader._load_iirc_cifar100" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load CIFAR100 dataset and convert it to IIRC-CIFAR100 format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<em>string</em>) – The location of the dataset</p></li>
+<li><p><strong>intask_valid_train_ratio</strong> (<em>float</em>) – the percentage of the training set to be taken for the in-task validation set
+, a training-like validation set used for valdation during the task training (default: 0.1)</p></li>
+<li><p><strong>posttask_valid_train_ratio</strong> (<em>float</em>) – the percentage of the training set to be taken for the post-task validation
+set, a test-like validation set used for valdation after the task training (default: 0.1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>datasets, a dictionary with the keys corresponding to the four splits (train,
+intask_validation, posttask_validation, test), and the values being a list of the samples that belong to
+each split (with the images provided in Image.Image type) in the DatasetTypeStruct structure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict[str, DatasetStructType]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="iirc.lll_datasets_loader._load_incremental_cifar100">
+<code class="sig-prename descclassname">iirc.lll_datasets_loader.</code><code class="sig-name descname">_load_incremental_cifar100</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">root</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'.'</span></em>, <em class="sig-param"><span class="n">intask_valid_train_ratio</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.1</span></em>, <em class="sig-param"><span class="n">posttask_valid_train_ratio</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.1</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span>List<span class="p">[</span>Tuple<span class="p">[</span>PIL.Image.Image<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#iirc.lll_datasets_loader._load_incremental_cifar100" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load CIFAR100 dataset and convert it to incremental CIFAR100 format (for class incremental learning)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<em>string</em>) – The location of the dataset</p></li>
+<li><p><strong>intask_valid_train_ratio</strong> (<em>float</em>) – the percentage of the training set to be taken for the in-task validation set
+, a training-like validation set used for valdation during the task training (default: 0.1)</p></li>
+<li><p><strong>posttask_valid_train_ratio</strong> (<em>float</em>) – the percentage of the training set to be taken for the post-task validation
+set, a test-like validation set used for valdation after the task training (default: 0.1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>datasets, a dictionary with the keys corresponding to the four splits (train,
+intask_validation, posttask_validation, test), and the values being a list of the samples that belong to
+each split (with the images provided in Image.Image type) in the DatasetTypeStruct structure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict[str, DatasetStructType]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="iirc.lll_datasets_loader._load_iirc_imagenet">
+<code class="sig-prename descclassname">iirc.lll_datasets_loader.</code><code class="sig-name descname">_load_iirc_imagenet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">root</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'.'</span></em>, <em class="sig-param"><span class="n">intask_valid_train_ratio</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.04</span></em>, <em class="sig-param"><span class="n">posttask_valid_train_ratio</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.04</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span>List<span class="p">[</span>Tuple<span class="p">[</span>PIL.Image.Image<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#iirc.lll_datasets_loader._load_iirc_imagenet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load Imagenet dataset and convert it to IIRC-ImageNet format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<em>string</em>) – The location of the dataset</p></li>
+<li><p><strong>intask_valid_train_ratio</strong> (<em>float</em>) – the percentage of the training set to be taken for the in-task validation set
+, a training-like validation set used for valdation during the task training (default: 0.1)</p></li>
+<li><p><strong>posttask_valid_train_ratio</strong> (<em>float</em>) – the percentage of the training set to be taken for the post-task validation
+set, a test-like validation set used for valdation after the task training (default: 0.1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>datasets, a dictionary with the keys corresponding to the four splits (train,
+intask_validation, posttask_validation, test), and the values being a list of the samples that belong to
+each split (with the images paths provided so that images can be loaded on the fly) in the DatasetTypeStruct
+structure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict[str, DatasetStructType]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="iirc.lll_datasets_loader._load_incremental_imagenet">
+<code class="sig-prename descclassname">iirc.lll_datasets_loader.</code><code class="sig-name descname">_load_incremental_imagenet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">root</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'.'</span></em>, <em class="sig-param"><span class="n">intask_valid_train_ratio</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.04</span></em>, <em class="sig-param"><span class="n">posttask_valid_train_ratio</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.04</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Union<span class="p">[</span>List<span class="p">[</span>Tuple<span class="p">[</span>PIL.Image.Image<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><a class="headerlink" href="#iirc.lll_datasets_loader._load_incremental_imagenet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load Imagenet dataset and convert it to incremental Imagenet format (for class incremental learning)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<em>string</em>) – The location of the dataset</p></li>
+<li><p><strong>intask_valid_train_ratio</strong> (<em>float</em>) – the percentage of the training set to be taken for the in-task validation set
+, a training-like validation set used for valdation during the task training (default: 0.1)</p></li>
+<li><p><strong>posttask_valid_train_ratio</strong> (<em>float</em>) – the percentage of the training set to be taken for the post-task validation
+set, a test-like validation set used for valdation after the task training (default: 0.1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>datasets, a dictionary with the keys corresponding to the four splits (train,
+intask_validation, posttask_validation, test), and the values being a list of the samples that belong to
+each split (with the images paths provided so that images can be loaded on the fly) in the DatasetTypeStruct
+structure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict[str, DatasetStructType]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="iirc.lll_datasets_loader._get_tasks_configuration">
+<code class="sig-prename descclassname">iirc.lll_datasets_loader.</code><code class="sig-name descname">_get_tasks_configuration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataset_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">tasks_configuration_id</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">joint</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><span class="p">, </span>Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#iirc.lll_datasets_loader._get_tasks_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the tasks and classes order</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_name</strong> (<em>str</em>) – The name of the dataset, ex: iirc_cifar100</p></li>
+<li><p><strong>tasks_configuration_id</strong> (<em>int</em>) – The configuration id, where each configuration corresponds to a specific tasks and
+classes order for each dataset. Ignore when joint is set to True (default: 0)</p></li>
+<li><p><strong>joint</strong> (<em>bool</em>) – provided all the classes in a single task for joint training (default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>tasks (List[List[str]]): a list of lists where each inner list contains the set of classes (class names) that
+will be introduced in that task (example: [[dog, cat, car], [tiger, truck, fish]])
+class_names_to_idx (Dict[str, int]): a dictionary with the class name as key, and the class index as value
+(example: {“dog”: 0, “cat”: 1, …})</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[List[List[str]], Dict[str, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">IIRC</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="iirc_tutorial.html">IIRC Package Tutorial Using PyTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lll_methods_guide.html">Lifelong Learning Methods Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="iirc.html">iirc package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="iirc.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="iirc.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iirc.html#module-iirc">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lll_methods.html">lll_methods package</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">&lt;no title&gt;</a><ul>
+  <li><a href="iirc.html">iirc package</a><ul>
+      <li>Previous: <a href="iirc.iirc_definitions.html" title="previous chapter">iirc.iirc_definitions module</a></li>
+      <li>Next: <a href="lll_methods.html" title="next chapter">lll_methods package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Mohamed Abdelsalam, Mojtaba Faramarzi, Shagun Sodhani, Sarath Chandar (Chandar-Lab/Mila).
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/iirc.lll_datasets_loader.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

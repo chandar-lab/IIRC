@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iirc.lll_dataset.lll_dataset module &#8212; IIRC 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="iirc.lll_dataset.tensorflow_lll_dataset module" href="iirc.lll_dataset.tensorflow_lll_dataset.html" />
+    <link rel="prev" title="iirc.lll_dataset package" href="iirc.lll_dataset.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-iirc.lll_dataset.lll_dataset">
+<span id="iirc-lll-dataset-lll-dataset-module"></span><h1>iirc.lll_dataset.lll_dataset module<a class="headerlink" href="#module-iirc.lll_dataset.lll_dataset" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase">
+<em class="property">class </em><code class="sig-prename descclassname">iirc.lll_dataset.lll_dataset.</code><code class="sig-name descname">LLLDatasetBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataset</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>List<span class="p">[</span>Tuple<span class="p">[</span>PIL.Image.Image<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">, </span>List<span class="p">[</span>Tuple<span class="p">[</span>str<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span><span class="p">…</span><span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">tasks</span><span class="p">:</span> <span class="n">List<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">setup</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'IIRC'</span></em>, <em class="sig-param"><span class="n">using_image_path</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">cache_images</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>Any<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>Any<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">test_mode</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">complete_information_mode</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">superclass_data_pct</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.6</span></em>, <em class="sig-param"><span class="n">subclass_data_pct</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.6</span></em>, <em class="sig-param"><span class="n">superclass_sampling_size_cap</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">100</span></em><span class="sig-paren">)</span><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>A lifelong learning dataset base class with the underlying data changing based on what task is currently activated.
+This class is an abstract base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> (<em>DatasetStructType</em>) – a list of tuples which contains the data in the form of (image, (label,)) or
+(image, (label1,label2)). The image path (str) can be provided instead if the images would be loaded on
+the fly (see the argument using_image_path). label is a string representing the class name</p></li>
+<li><p><strong>tasks</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – a list of lists where each inner list contains the set of classes (class names)
+that will be introduced in that task (example: [[dog, cat, car], [tiger, truck, fish]])</p></li>
+<li><p><strong>setup</strong> (<em>str</em>) – Class Incremental Learning setup (CIL) or Incremental Implicitly Refined Classification setup
+(IIRC) (default: IIRC_SETUP)</p></li>
+<li><p><strong>using_image_path</strong> (<em>bool</em>) – whether the pillow image is provided in the dataset argument, or the image path
+that would be used later to load the image. set True if using the image path (default: False)</p></li>
+<li><p><strong>cache_images</strong> (<em>bool</em>) – cache images that belong to the current task in the memory, only applicable when using
+the image path (default: False)</p></li>
+<li><p><strong>essential_transforms_fn</strong> (<em>Callable</em><em>[</em><em>[</em><em>Any</em><em>]</em><em>, </em><em>Any</em><em>]</em>) – A function that contains the essential transforms (for
+example, converting a pillow image to a tensor) that should be applied to each image. This function is
+applied only when the augmentation_transforms_fn is set to None (as in the case of a test set) or inside
+the disable_augmentations context (default: None)</p></li>
+<li><p><strong>augmentation_transforms_fn</strong> – (Callable[[Any], Any]): A function that contains the essential transforms (for
+example, converting a pillow image to a tensor) and augmentation transforms (for example, applying
+random cropping) that should be applied to each image. When this function is provided,
+essential_transforms_fn is not used except inside the disable_augmentations context (default: None)</p></li>
+<li><p><strong>test_mode</strong> (<em>bool</em>) – Whether this dataset is considered a training split or a test split. This info is only
+helpful when using the IIRC setup (default: False)</p></li>
+<li><p><strong>complete_information_mode</strong> (<em>bool</em>) – Whether the dataset is in complete information mode or incomplete
+information mode.
+This is only valid when using the IIRC setup.
+In the incomplete information mode, if a sample has two labels corresponding to a previous task and a
+current task (example: dog and Bulldog), only the label present in the current task is provided
+(Bulldog). In the complete information mode, both labels will be provided. In all cases, no label from a
+future task would be provided.
+When no value is set for complete_information_mode, this value is defaulted to the test_mode value (complete
+information during test mode only) (default: None)</p></li>
+<li><p><strong>superclass_data_pct</strong> (<em>float</em>) – The percentage of samples sampled for each superclass from its consistuent
+subclasses.
+This is valid only when using the IIRC setup and when test_mode is set to False.
+For example, If the superclass “dog” has the subclasses “Bulldog” and “Whippet”, and superclass_data_pct
+is set to 0.4, then 40% of each of the “Bulldog” samples and “Whippet” samples will be provided when
+training on the task that has the class “dog”  (default: 0.6)</p></li>
+<li><p><strong>subclass_data_pct</strong> (<em>float</em>) – The percentage of samples sampled for each subclass if it has a superclass.
+This is valid only when using the IIRC setup and when test_mode is set to False.
+For example, If the superclass “dog” has one of the subclasses as “Bulldog”, and superclass_data_pct is
+set to 0.4 while subclass_data_pct is set to 0.8, then 40% of the “Bulldog” samples will be provided
+when training on the task that contains “dog”, and 80% of the “Bulldog” samples will be provided when
+training on the task that contains “Bulldog”. superclass_data_pct and subclass_data_pct don’t need to
+sum to 1 as the samples can be repeated across tasks (in the previous example, 20% of the samples were
+repeated across the two tasks) (default: 0.6)</p></li>
+<li><p><strong>superclass_sampling_size_cap</strong> (<em>int</em>) – The number of subclasses a superclass should contain after which the
+number of samples doesn’t increase anymore.
+This is valid only when using the IIRC setup and when test_mode is set to False.
+For example, If a superclass has 8 subclasses, with the superclass_data_pct set to 0.4, and
+superclass_sampling_size_cap set to 5, then superclass_data_pct for that specific superclass will be
+adjusted to 0.25 (5 / 8 * 0.4) (default: 100)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.dataset_state_dict">
+<code class="sig-name descname">dataset_state_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.dataset_state_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a dict that contains the current state of the dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a dictionary with all the attributes (key is attribute name) and their values, except the
+attributes in the self.non_savable_attributes</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.load_dataset_state_dict">
+<code class="sig-name descname">load_dataset_state_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_dict</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.load_dataset_state_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function loads the object attributes with the values in state_dict</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state_dict</strong> (<em>Dict</em>) – a dictionary with the attribute names as keys and their values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the dataset to the starting state</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase._divide_data_across_tasks_IIRC">
+<code class="sig-name descname">_divide_data_across_tasks_IIRC</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">superclass_data_pct</span></em>, <em class="sig-param"><span class="n">subclass_data_pct</span></em>, <em class="sig-param"><span class="n">superclass_sampling_size_cap</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>int<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase._divide_data_across_tasks_IIRC" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Divide the dataset across the tasks depending on the classes per task, while sampling for each superclass some</dt><dd><p>samples from its constituent subclasses.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>superclass_data_pct</strong> (<em>float</em>) – The percentage of samples sampled for each superclass from its consistuent
+subclasses.
+For example, If the superclass “dog” has the subclasses “Bulldog” and “Whippet”, and superclass_data_pct
+is set to 0.4, then 40% of each of the “Bulldog” samples and “Whippet” samples will be provided when
+training on the task that has the class “dog”</p></li>
+<li><p><strong>subclass_data_pct</strong> (<em>float</em>) – The percentage of samples sampled for each subclass if it has a superclass.
+For example, If the superclass “dog” has one of the subclasses as “Bulldog”, and superclass_data_pct is
+set to 0.4 while subclass_data_pct is set to 0.8, then 40% of the “Bulldog” samples will be provided
+when training on the task that contains “dog”, and 80% of the “Bulldog” samples will be provided when
+training on the task that contains “Bulldog”. superclass_data_pct and subclass_data_pct don’t need to
+sum to 1 as the samples can be repeated across tasks (in the previous example, 20% of the samples were
+repeated across the two tasks)</p></li>
+<li><p><strong>superclass_sampling_size_cap</strong> (<em>int</em>) – The number of subclasses a superclass should contain after which the
+number of samples doesn’t increase anymore.
+For example, If a superclass has 8 subclasses, with the superclass_data_pct set to 0.4, and
+superclass_sampling_size_cap set to 5, then superclass_data_pct for that specific superclass will be
+adjusted to 0.25 (5 / 8 * 0.4)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a dictionary with the task id as key, and the list of the samples that corespond to
+that task as the value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict[int, List[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase._divide_data_across_tasks">
+<code class="sig-name descname">_divide_data_across_tasks</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>int<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase._divide_data_across_tasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divide the dataset across the tasks depending on the classes per task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a dictionary with the task id as key, and the list of the samples that corespond to
+that task as the value</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict[int, List[int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase._check_complete_information_mode">
+<code class="sig-name descname">_check_complete_information_mode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase._check_complete_information_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.choose_task">
+<code class="sig-name descname">choose_task</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">task_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.choose_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the data corresponding to task “task_id” and update tbe seen classes based on it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>task_id</strong> (<em>int</em>) – The task_id of the task to load</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.load_tasks_up_to">
+<code class="sig-name descname">load_tasks_up_to</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">task_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.load_tasks_up_to" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Load the data corresponding to the tasks up to “task_id” (including that task). When using the IIRC setup, this</dt><dd><p>function is only available when complete_information_mode is set to True.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>task_id</strong> (<em>int</em>) – The task_id of the task to load</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase._load_cur_task_data">
+<code class="sig-name descname">_load_cur_task_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase._load_cur_task_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase._load_data_up_to">
+<code class="sig-name descname">_load_data_up_to</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">task_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase._load_data_up_to" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase._update_seen_classes">
+<code class="sig-name descname">_update_seen_classes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase._update_seen_classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.get_labels">
+<code class="sig-name descname">get_labels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.get_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the labels of the sample with index (index) in the current task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the sample in the current task, this is a relative index within the current task</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The labels corresponding to the sample. If using CIL setup, or if the other label is
+masked, then the other str contains the value specified by the NO_LABEL_PLACEHOLDER</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[str, str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.get_item">
+<code class="sig-name descname">get_item</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>Any<span class="p">, </span>str<span class="p">, </span>str<span class="p">]</span><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.get_item" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Return the image with index (index) in the current task along with its labels. No transformations are applied</dt><dd><p>to the image.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the sample in the current task, this is a relative index within the current task</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The image along with its labels . If using CIL setup, or if the other label is masked,
+then the other str contains the value specified by the NO_LABEL_PLACEHOLDER</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[Any, str, str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.get_image_indices_by_cla">
+<code class="sig-name descname">get_image_indices_by_cla</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cla</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">num_samples</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">shuffle</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.get_image_indices_by_cla" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>get the indices of the samples of cla within the cur_task. Warning: if the task data is changed (like by</dt><dd><p>using choose_task() or load_tasks_up_to()), these indices would point to other samples as they are relative
+to the current task</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cla</strong> (<em>str</em>) – The class name</p></li>
+<li><p><strong>num_samples</strong> (<em>int</em>) – The number of samples needed for that class, set to -1 to return the indices of all the samples
+that belong to that class in the current task (default: -1)</p></li>
+<li><p><strong>shuffle</strong> (<em>bool</em>) – Whether to return the indices shuffled (default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The indices of the samples of class cla within the current task (relative indices)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase._abc_impl">
+<code class="sig-name descname">_abc_impl</code><em class="property"> = &lt;_abc_data object&gt;</em><a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase._abc_impl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.disable_augmentations">
+<code class="sig-name descname">disable_augmentations</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.disable_augmentations" title="Permalink to this definition">¶</a></dt>
+<dd><p>A context manager during which only the essential transformations are applied</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.enable_complete_information_mode">
+<code class="sig-name descname">enable_complete_information_mode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.enable_complete_information_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="iirc.lll_dataset.lll_dataset.LLLDatasetBase.enable_incomplete_information_mode">
+<code class="sig-name descname">enable_incomplete_information_mode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#iirc.lll_dataset.lll_dataset.LLLDatasetBase.enable_incomplete_information_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">IIRC</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="iirc_tutorial.html">IIRC Package Tutorial Using PyTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lll_methods_guide.html">Lifelong Learning Methods Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="iirc.html">iirc package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="iirc.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iirc.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iirc.html#module-iirc">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lll_methods.html">lll_methods package</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">&lt;no title&gt;</a><ul>
+  <li><a href="iirc.html">iirc package</a><ul>
+  <li><a href="iirc.lll_dataset.html">iirc.lll_dataset package</a><ul>
+      <li>Previous: <a href="iirc.lll_dataset.html" title="previous chapter">iirc.lll_dataset package</a></li>
+      <li>Next: <a href="iirc.lll_dataset.tensorflow_lll_dataset.html" title="next chapter">iirc.lll_dataset.tensorflow_lll_dataset module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Mohamed Abdelsalam, Mojtaba Faramarzi, Shagun Sodhani, Sarath Chandar (Chandar-Lab/Mila).
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/iirc.lll_dataset.lll_dataset.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

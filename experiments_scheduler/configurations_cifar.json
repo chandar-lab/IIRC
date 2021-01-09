@@ -1,0 +1,483 @@
+{
+    "finetune": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "finetune",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 0,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": true,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "finetune_20": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "finetune",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 20,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": true,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "lucir_20": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "lucir",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 20,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": false,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "icarl_cnn_20": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "icarl_cnn",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 20,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": false,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "icarl_norm_20": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "icarl_norm",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 20,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": false,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "agem_20_lr05": {
+        "active":false,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "agem",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 0.5,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 20,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": false,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "agem_20_lr1": {
+        "active":false,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "agem",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 20,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": false,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "finetune_50": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "finetune",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 50,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": true,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "finetune_100": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "finetune",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 100,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": true,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "finetune_200": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "finetune",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 200,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": true,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "incremental_joint": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "finetune",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 0,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": true,
+            "complete_info": true,
+            "incremental_joint": true,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "infinite_buffer": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "finetune",
+            "seed": 100,
+            "optimizer": "momentum",
+            "epochs_per_task": 140,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": -1,
+            "total_n_memories": 100000,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "tasks_configuration_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": true,
+            "complete_info": false,
+            "incremental_joint": false,
+            "joint": false,
+            "save_each_task_model": false
+        }
+    },
+    "joint": {
+        "active":true,
+        "run_id_key": "tasks_configuration_id",
+        "cluster_arguments": {
+            "gpus_per_node": 1,
+            "nodes": 1,
+            "time": "2:59:00"
+        },
+        "fixed_arguments": {
+            "dataset": "iirc_cifar100",
+            "batch_size": 128,
+            "n_layers": 32,
+            "method": "finetune",
+            "tasks_configuration_id": 0,
+            "optimizer": "momentum",
+            "epochs_per_task": 200,
+            "checkpoint_interval": 5,
+            "lr": 1.0,
+            "lr_gamma": 0.1,
+            "lr_schedule": "80 110",
+            "weight_decay": 1e-5,
+            "n_memories_per_class": 0,
+            "total_n_memories": -1,
+            "group": "final_cifar_experiments"
+        },
+        "iterable_arguments": {
+            "seed": [100, 101, 102, 103, 104]
+        },
+        "flags": {
+            "reduce_lr_on_plateau": true,
+            "use_best_model": true,
+            "complete_info": true,
+            "incremental_joint": false,
+            "joint": true,
+            "save_each_task_model": false
+        }
+    }
+}
