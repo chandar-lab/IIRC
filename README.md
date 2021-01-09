@@ -1,6 +1,7 @@
 ## IIRC: Incremental Implicitly Refined Classification 
 
-https://arxiv.org/abs/2012.12477
+Paper: https://arxiv.org/abs/2012.12477
+Documentation: https://iirc.readthedocs.io/en/latest/
 
 <hr>
 
