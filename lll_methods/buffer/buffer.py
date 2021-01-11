@@ -305,7 +305,7 @@ class BufferBase(ABC, data.Dataset):
 
     @contextmanager
     def disable_augmentations(self):
-        """A context manager during which only the essential transformations are applied"""
+        """A context where only the essential transformations are applied"""
         cur_augmentations_state = self._apply_augmentations
         self._apply_augmentations = False
         try:
