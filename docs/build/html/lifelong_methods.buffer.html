@@ -1,0 +1,445 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lifelong_methods.buffer package &mdash; IIRC 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lifelong_methods.methods package" href="lifelong_methods.methods.html" />
+    <link rel="prev" title="lifelong_methods package" href="lifelong_methods.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IIRC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="iirc_tutorial.html">IIRC Package Tutorial Using PyTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loading_datasets_tutorial.html">Loading IIRC and incremental datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifelong_methods_guide.html">Lifelong Learning Methods Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="iirc.html">iirc package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="lifelong_methods.html">lifelong_methods package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="lifelong_methods.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">lifelong_methods.buffer package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.buffer.buffer">lifelong_methods.buffer.buffer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.buffer">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lifelong_methods.methods.html">lifelong_methods.methods package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifelong_methods.models.html">lifelong_methods.models package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.html#module-lifelong_methods.utils">lifelong_methods.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.html#module-lifelong_methods">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IIRC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="lifelong_methods.html">lifelong_methods package</a> &raquo;</li>
+        
+      <li>lifelong_methods.buffer package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lifelong_methods.buffer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="lifelong-methods-buffer-package">
+<h1>lifelong_methods.buffer package<a class="headerlink" href="#lifelong-methods-buffer-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-lifelong_methods.buffer.buffer">
+<span id="lifelong-methods-buffer-buffer-module"></span><h2>lifelong_methods.buffer.buffer module<a class="headerlink" href="#module-lifelong_methods.buffer.buffer" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.buffer.buffer.BufferBase">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.buffer.buffer.</code><code class="sig-name descname">BufferBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">buffer_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000000000.0</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataset.Dataset</span></code></p>
+<p>A buffer that saves memories from current task to replay them during later tasks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>Dict</em>) – <p>A dictionary that has the following key value pairs:
+n_memories_per_class (int): Number of memories/samples to save per class, set to -1 to use total_n_mems
+total_n_mems (int): The total number of memories to save (mutually exclusive with n_memories_per_class)
+max_mems_pool_per_class (int): The pool size per class to sample randomly the memories from which the buffer</p>
+<blockquote>
+<div><p>chooses what memories to keep, set to -1 to choose memories from all the class samples</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>buffer_dir</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The directory where the buffer data will be kept (None for keeping the buffer data
+in memory) (default: None)</p></li>
+<li><p><strong>map_size</strong> (<em>int</em>) – Th estimated size of the buffer lmdb database, in bytes (defalt: 1e9)</p></li>
+<li><p><strong>essential_transforms_fn</strong> (<em>Optional</em><em>[</em><em>Callable</em><em>[</em><em>[</em><em>Image.Image</em><em>]</em><em>, </em><em>torch.Tensor</em><em>]</em><em>]</em>) – A function that contains the
+essential transforms (for example, converting a pillow image to a tensor) that should be applied to each
+image. This function is applied only when the augmentation_transforms_fn is set to None (as in the case
+of a test set) or inside the disable_augmentations context (default: None)</p></li>
+<li><p><strong>augmentation_transforms_fn</strong> – (Optional[Callable[[Image.Image], torch.Tensor]]): A function that contains the
+essential transforms (for example, converting a pillow image to a tensor) and augmentation transforms (for
+example, applying random cropping) that should be applied to each image. When this function is provided,
+essential_transforms_fn is not used except inside the disable_augmentations context (default: None)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.buffer_state_dict">
+<code class="sig-name descname">buffer_state_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.buffer_state_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a dict that contains the current state of the buffer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a dictionary with all the attributes (key is attribute name) and their values, except the
+attributes in the self.non_savable_attributes</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.load_buffer_state_dict">
+<code class="sig-name descname">load_buffer_state_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_dict</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.load_buffer_state_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function loads the object attributes with the values in state_dict</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state_dict</strong> (<em>Dict</em>) – a dictionary with the attribute names as keys and their values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.get_image_indices_by_class">
+<code class="sig-name descname">get_image_indices_by_class</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">class_name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.get_image_indices_by_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the indices of the samples of class “class_name”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>class_name</strong> (<em>str</em>) – The class name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The indices of the samples of class “class_name”</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.begin_adding_samples_to_lmdb">
+<code class="sig-name descname">begin_adding_samples_to_lmdb</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.begin_adding_samples_to_lmdb" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>A function that needs to be called before adding samples to the buffer, in case of using an lmdb buffer, so that</dt><dd><p>a transaction is created.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.end_adding_samples_to_lmdb">
+<code class="sig-name descname">end_adding_samples_to_lmdb</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.end_adding_samples_to_lmdb" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>A function that needs to be called after adding samples to the buffer is done, in case of using an lmdb buffer,</dt><dd><p>so that the transaction is committed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.reset_lmdb_database">
+<code class="sig-name descname">reset_lmdb_database</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.reset_lmdb_database" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>A function that needs to be called after each epoch, in case of using an lmdb dataset, to close the environment</dt><dd><p>and open a new one to kill active readers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.add_sample">
+<code class="sig-name descname">add_sample</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">class_label</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">image</span><span class="p">:</span> <span class="n">PIL.Image.Image</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Tuple<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">rank</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.add_sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a sample to the buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>class_label</strong> (<em>str</em>) – The class label of the image, and in case the image has multiple labels, the class label
+for which the sample should be associated with in the buffer</p></li>
+<li><p><strong>image</strong> (<em>Image.Image</em>) – The image to be added</p></li>
+<li><p><strong>labels</strong> (<em>Tuple</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em>) – The labels of the image (including the class_label), in case the image has only
+one label, provide the second label as NO_LABEL_PLACEHOLDER</p></li>
+<li><p><strong>rank</strong> (<em>int</em>) – The rank of the current gpu, in case of using multiple gpus</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.remove_samples">
+<code class="sig-name descname">remove_samples</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">class_label</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">n</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.remove_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a number (n) of the samples associated with class “class_label”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>class_label</strong> (<em>str</em>) – The class label of which the sample is associated with in the buffer</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – The number of samples to remove</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.update_buffer_new_task">
+<code class="sig-name descname">update_buffer_new_task</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">new_task_data</span><span class="p">:</span> <span class="n"><a class="reference internal" href="iirc.lifelong_dataset.html#iirc.lifelong_dataset.torch_dataset.Dataset" title="iirc.lifelong_dataset.torch_dataset.Dataset">iirc.lifelong_dataset.torch_dataset.Dataset</a></span></em>, <em class="sig-param"><span class="n">dist_args</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.update_buffer_new_task" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Update the buffer by adding samples of classes of a new task, after removing samples associated with the older</dt><dd><p>classes in case the buffer has a fixed size (self.fixed_n_mems_per_cla is set to False)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new_task_data</strong> (<a class="reference internal" href="iirc.lifelong_dataset.html#iirc.lifelong_dataset.tensorflow_dataset.Dataset" title="iirc.lifelong_dataset.tensorflow_dataset.Dataset"><em>Dataset</em></a>) – The new task data</p></li>
+<li><p><strong>dist_args</strong> (<em>Optional</em><em>[</em><em>Dict</em><em>]</em>) – a dictionary of the distributed processing values in case of multiple gpu (ex:</p></li>
+<li><p><strong>of the device</strong><strong>) </strong><strong>(</strong><strong>default</strong> (<em>rank</em>) – None)</p></li>
+<li><p><strong>**kwargs</strong> – arguments associated with each method</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.buffer.buffer.BufferBase.disable_augmentations">
+<code class="sig-name descname">disable_augmentations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.buffer.buffer.BufferBase.disable_augmentations" title="Permalink to this definition">¶</a></dt>
+<dd><p>A context where only the essential transformations are applied</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="lifelong_methods.buffer.buffer.TaskDataMergedWithBuffer">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.buffer.buffer.</code><code class="sig-name descname">TaskDataMergedWithBuffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buffer</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase">lifelong_methods.buffer.buffer.BufferBase</a></span></em>, <em class="sig-param"><span class="n">task_data</span><span class="p">:</span> <span class="n"><a class="reference internal" href="iirc.lifelong_dataset.html#iirc.lifelong_dataset.torch_dataset.Dataset" title="iirc.lifelong_dataset.torch_dataset.Dataset">iirc.lifelong_dataset.torch_dataset.Dataset</a></span></em>, <em class="sig-param"><span class="n">buffer_sampling_multiplier</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.buffer.buffer.TaskDataMergedWithBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataset.Dataset</span></code></p>
+<p>A torch dataset object that merges the task data and the buffer with the specified options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffer</strong> (<a class="reference internal" href="#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><em>BufferBase</em></a>) – A buffer object that includes the memories from previous classes</p></li>
+<li><p><strong>task_data</strong> (<em>data.Dataset</em>) – A dataset object that contains the new task data</p></li>
+<li><p><strong>buffer_sampling_multiplier</strong> (<em>float</em>) – A multiplier for sampling from the buffer more/less times than the size
+of the buffer (for example a multiplier of 2 samples from the buffer (with replacement) twice its size per
+epoch, a multiplier of 1 ensures that all the buffer samples will be retrieved once”)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods.buffer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lifelong_methods.buffer" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lifelong_methods.methods.html" class="btn btn-neutral float-right" title="lifelong_methods.methods package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lifelong_methods.html" class="btn btn-neutral float-left" title="lifelong_methods package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Mohamed Abdelsalam, Mojtaba Faramarzi, Shagun Sodhani, Sarath Chandar (Chandar-Lab/Mila).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

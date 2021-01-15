@@ -1,0 +1,952 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lifelong_methods.methods package &mdash; IIRC 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lifelong_methods.models package" href="lifelong_methods.models.html" />
+    <link rel="prev" title="lifelong_methods.buffer package" href="lifelong_methods.buffer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IIRC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="iirc_tutorial.html">IIRC Package Tutorial Using PyTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loading_datasets_tutorial.html">Loading IIRC and incremental datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifelong_methods_guide.html">Lifelong Learning Methods Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="iirc.html">iirc package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="lifelong_methods.html">lifelong_methods package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="lifelong_methods.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="lifelong_methods.buffer.html">lifelong_methods.buffer package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">lifelong_methods.methods package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.methods.agem">lifelong_methods.methods.agem module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.methods.base_method">lifelong_methods.methods.base_method module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.methods.finetune">lifelong_methods.methods.finetune module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.methods.icarl">lifelong_methods.methods.icarl module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.methods.icarl_cnn">lifelong_methods.methods.icarl_cnn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.methods.icarl_norm">lifelong_methods.methods.icarl_norm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.methods.lucir">lifelong_methods.methods.lucir module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.methods.mask_seen_classes">lifelong_methods.methods.mask_seen_classes module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-lifelong_methods.methods">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lifelong_methods.models.html">lifelong_methods.models package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.html#module-lifelong_methods.utils">lifelong_methods.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.html#module-lifelong_methods">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IIRC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="lifelong_methods.html">lifelong_methods package</a> &raquo;</li>
+        
+      <li>lifelong_methods.methods package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lifelong_methods.methods.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="lifelong-methods-methods-package">
+<h1>lifelong_methods.methods package<a class="headerlink" href="#lifelong-methods-methods-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-lifelong_methods.methods.agem">
+<span id="lifelong-methods-methods-agem-module"></span><h2>lifelong_methods.methods.agem module<a class="headerlink" href="#module-lifelong_methods.methods.agem" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.methods.agem.Model">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.agem.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_cla_per_tsk</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>numpy.ndarray<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">class_names_to_idx</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.agem.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lifelong_methods.methods.base_method.BaseMethod" title="lifelong_methods.methods.base_method.BaseMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.methods.base_method.BaseMethod</span></code></a></p>
+<dl class="simple">
+<dt>An  implementation of A-GEM from</dt><dd><p>Arslan Chaudhry, Marc’Aurelio Ranzato, Marcus Rohrbach, and Mohamed Elhoseiny.
+Efficient Lifelong Learning with A-GEM.
+ICLR, 2019.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="lifelong_methods.methods.agem.Model.observe">
+<code class="sig-name descname">observe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">in_buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>torch.Tensor<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">train</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.agem.Model.observe" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used for training and validation, returns a tensor of model predictions and the loss
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p></li>
+<li><p><strong>y</strong> (<em>torch.Tensor</em>) – A 2-d batch indicator tensor of shape (number of samples x number of classes)</p></li>
+<li><p><strong>in_buffer</strong> (<em>Optional</em><em>[</em><em>torch.Tensor</em><em>]</em>) – A 1-d boolean tensor which indicates which sample is from the buffer.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – Whether this is training or validation/test</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predictions (torch.Tensor) : a 2-d float tensor of the model predictions of shape (number of samples x number of classes)
+loss (float): the value of the loss</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[torch.Tensor, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.agem.Model.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.methods.agem.Model.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used during inference, returns a tensor of model predictions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 2-d float tensor of the model predictions of shape (number of samples x number of classes)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.agem.Model.consolidate_task_knowledge">
+<code class="sig-name descname">consolidate_task_knowledge</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.agem.Model.consolidate_task_knowledge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place after training on each task</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="lifelong_methods.methods.agem.Buffer">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.agem.</code><code class="sig-name descname">Buffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">buffer_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000000000.0</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.agem.Buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.buffer.buffer.BufferBase</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods.methods.base_method">
+<span id="lifelong-methods-methods-base-method-module"></span><h2>lifelong_methods.methods.base_method module<a class="headerlink" href="#module-lifelong_methods.methods.base_method" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.methods.base_method.BaseMethod">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.base_method.</code><code class="sig-name descname">BaseMethod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_cla_per_tsk</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>numpy.ndarray<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">class_names_to_idx</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>A base model for all the lifelong learning methods to inherit, which contains all common functionality</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_cla_per_tsk</strong> (<em>Union</em><em>[</em><em>np.ndarray</em><em>, </em><em>List</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An integer numpy array including the number of classes per each task.</p></li>
+<li><p><strong>class_names_to_idx</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – The index of each class name</p></li>
+<li><p><strong>config</strong> (<em>Dict</em>) – <p>A dictionary that has the following key value pairs:
+temperature (float): the temperature to divide the logits by
+memory_strength (float): The weight to add for the samples from the buffer when computing the loss</p>
+<blockquote>
+<div><p>(not implemented yet)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>n_layers (int): The number of layers for the network used (not all values are allowed depending on the</dt><dd><p>architecture)</p>
+</dd>
+</dl>
+<p>dataset (str): The name of the dataset (for ex: iirc_cifar100)
+optimizer (str): The type of optimizer (“momentum” or “adam”)
+lr (float): The initial learning rate
+lr_schedule (Optional[list[int]]): The epochs for which the learning rate changes
+lr_gamma (float): The multiplier multiplied by the learning rate at the epochs specified in lr_schedule
+reduce_lr_on_plateau (bool): reduce learning rate on plateau
+weight_decay (float): the weight decay multiplier</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.method_state_dict">
+<code class="sig-name descname">method_state_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Dict<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.method_state_dict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This function returns a dict that contains the state dictionaries of this method (including the model, the</dt><dd><p>optimizer, the scheduler, as well as the values of the variables whose names are inside the
+self.method_variables), so that they can be used for checkpointing.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a dictionary with the state dictionaries of this method, the optimizer, the scheduler, and the values
+of the variables whose names are inside the self.method_variables</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.load_method_state_dict">
+<code class="sig-name descname">load_method_state_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_dicts</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Dict<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.load_method_state_dict" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This function loads the state dicts of the various parts of this method (along with the variables in</dt><dd><p>self.method_variables)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_dicts</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>Dict</em><em>]</em>) – a dictionary with the state dictionaries of this method, the optimizer, the</p></li>
+<li><p><strong>scheduler</strong> – </p></li>
+<li><p><strong>the values of the variables whose names are inside the self.method_variables</strong> (<em>and</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.reset_optimizer_and_scheduler">
+<code class="sig-name descname">reset_optimizer_and_scheduler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">optimizable_parameters</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Iterator<span class="p">[</span>torch.nn.parameter.Parameter<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.reset_optimizer_and_scheduler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the optimizer and scheduler after a task is done (with the option to specify which parameters to optimize</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>(</strong><strong>Optional</strong><strong>[</strong><strong>Iterator</strong><strong>[</strong><strong>nn.parameter.Parameter</strong><strong>]</strong><strong>]</strong> (<em>optimizable_parameters</em>) – specify the parameters that should be
+optimized, in case some parameters needs to be frozen (default: None)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.get_last_lr">
+<code class="sig-name descname">get_last_lr</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>float<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.get_last_lr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current learning rate</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.step_scheduler">
+<code class="sig-name descname">step_scheduler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val_metric</span><span class="p">:</span> <span class="n">Optional</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.step_scheduler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take a step with the scheduler (should be called after each epoch)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val_metric</strong> (<em>Optional</em>) – a metric to compare in case of reducing the learning rate on plateau (default: None)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.forward_net">
+<code class="sig-name descname">forward_net</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.forward_net" title="Permalink to this definition">¶</a></dt>
+<dd><p>an alias for self.net(x)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>output (torch.Tensor): The network output of shape (minibatch size x output size)
+latent (torch.Tensor): The network latent variable of shape (minibatch size x last hidden size)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[torch.Tensor, torch.Tensor]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.prepare_model_for_new_task">
+<code class="sig-name descname">prepare_model_for_new_task</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">task_data</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="iirc.lifelong_dataset.html#iirc.lifelong_dataset.torch_dataset.Dataset" title="iirc.lifelong_dataset.torch_dataset.Dataset">iirc.lifelong_dataset.torch_dataset.Dataset</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dist_args</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>dict<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.prepare_model_for_new_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place before the starting epoch of each new task.</p>
+<p>The shared functionality among the methods is that the seen classes are updated and the optimizer and scheduler
+are reset. (see _prepare_model_for_new_task for method specific functionality)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_data</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="iirc.lifelong_dataset.html#iirc.lifelong_dataset.tensorflow_dataset.Dataset" title="iirc.lifelong_dataset.tensorflow_dataset.Dataset"><em>Dataset</em></a><em>]</em>) – The new task data (default: None)</p></li>
+<li><p><strong>dist_args</strong> (<em>Optional</em><em>[</em><em>Dict</em><em>]</em>) – a dictionary of the distributed processing values in case of multiple gpu (ex:</p></li>
+<li><p><strong>of the device</strong><strong>) </strong><strong>(</strong><strong>default</strong> (<em>rank</em>) – None)</p></li>
+<li><p><strong>**kwargs</strong> – arguments that are method specific</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.consolidate_epoch_knowledge">
+<code class="sig-name descname">consolidate_epoch_knowledge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val_metric</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.consolidate_epoch_knowledge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place after training on each epoch</p>
+<p>The shared functionality among the methods is that the scheduler takes a step. (see _consolidate_epoch_knowledge
+for method specific functionality)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val_metric</strong> (<em>Optional</em>) – a metric to compare in case of reducing the learning rate on plateau (default: None)</p></li>
+<li><p><strong>**kwargs</strong> – arguments that are method specific</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.observe">
+<em class="property">abstract </em><code class="sig-name descname">observe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">in_buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>torch.Tensor<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">train</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.observe" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used for training and validation, returns a tensor of model predictions and the loss
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p></li>
+<li><p><strong>y</strong> (<em>torch.Tensor</em>) – A 2-d batch indicator tensor of shape (number of samples x number of classes)</p></li>
+<li><p><strong>in_buffer</strong> (<em>Optional</em><em>[</em><em>torch.Tensor</em><em>]</em>) – A 1-d boolean tensor which indicates which sample is from the buffer.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – Whether this is training or validation/test</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predictions (torch.Tensor) : a 2-d float tensor of the model predictions of shape (number of samples x number of classes)
+loss (float): the value of the loss</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[torch.Tensor, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.consolidate_task_knowledge">
+<em class="property">abstract </em><code class="sig-name descname">consolidate_task_knowledge</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.consolidate_task_knowledge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place after training each task
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – arguments that are method specific</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.base_method.BaseMethod.forward">
+<em class="property">abstract </em><code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.methods.base_method.BaseMethod.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used during inference, returns a tensor of model predictions
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 2-d float tensor of the model predictions of shape (number of samples x number of classes)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods.methods.finetune">
+<span id="lifelong-methods-methods-finetune-module"></span><h2>lifelong_methods.methods.finetune module<a class="headerlink" href="#module-lifelong_methods.methods.finetune" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.methods.finetune.Model">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.finetune.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_cla_per_tsk</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>numpy.ndarray<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">class_names_to_idx</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.finetune.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lifelong_methods.methods.base_method.BaseMethod" title="lifelong_methods.methods.base_method.BaseMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.methods.base_method.BaseMethod</span></code></a></p>
+<p>A finetuning (Experience Replay) baseline.</p>
+<dl class="py method">
+<dt id="lifelong_methods.methods.finetune.Model.observe">
+<code class="sig-name descname">observe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">in_buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>torch.Tensor<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">train</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.finetune.Model.observe" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used for training and validation, returns a tensor of model predictions and the loss
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p></li>
+<li><p><strong>y</strong> (<em>torch.Tensor</em>) – A 2-d batch indicator tensor of shape (number of samples x number of classes)</p></li>
+<li><p><strong>in_buffer</strong> (<em>Optional</em><em>[</em><em>torch.Tensor</em><em>]</em>) – A 1-d boolean tensor which indicates which sample is from the buffer.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – Whether this is training or validation/test</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predictions (torch.Tensor) : a 2-d float tensor of the model predictions of shape (number of samples x number of classes)
+loss (float): the value of the loss</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[torch.Tensor, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.finetune.Model.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.methods.finetune.Model.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used during inference, returns a tensor of model predictions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 2-d float tensor of the model predictions of shape (number of samples x number of classes)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.finetune.Model.consolidate_task_knowledge">
+<code class="sig-name descname">consolidate_task_knowledge</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.finetune.Model.consolidate_task_knowledge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place after training on each task</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="lifelong_methods.methods.finetune.Buffer">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.finetune.</code><code class="sig-name descname">Buffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">buffer_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000000000.0</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.finetune.Buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.buffer.buffer.BufferBase</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods.methods.icarl">
+<span id="lifelong-methods-methods-icarl-module"></span><h2>lifelong_methods.methods.icarl module<a class="headerlink" href="#module-lifelong_methods.methods.icarl" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.methods.icarl.Model">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.icarl.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_cla_per_tsk</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>numpy.ndarray<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">class_names_to_idx</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.icarl.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lifelong_methods.methods.base_method.BaseMethod" title="lifelong_methods.methods.base_method.BaseMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.methods.base_method.BaseMethod</span></code></a></p>
+<dl class="simple">
+<dt>An  implementation of iCaRL from</dt><dd><p>S.-A. Rebuffi, A. Kolesnikov, G. Sperl, and C. H. Lampert.
+iCaRL: Incremental classifier and representation learning.
+CVPR, 2017.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="lifelong_methods.methods.icarl.Model.observe">
+<code class="sig-name descname">observe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">in_buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>torch.Tensor<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">train</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.icarl.Model.observe" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used for training and validation, returns a tensor of model predictions and the loss
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p></li>
+<li><p><strong>y</strong> (<em>torch.Tensor</em>) – A 2-d batch indicator tensor of shape (number of samples x number of classes)</p></li>
+<li><p><strong>in_buffer</strong> (<em>Optional</em><em>[</em><em>torch.Tensor</em><em>]</em>) – A 1-d boolean tensor which indicates which sample is from the buffer.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – Whether this is training or validation/test</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predictions (torch.Tensor) : a 2-d float tensor of the model predictions of shape (number of samples x number of classes)
+loss (float): the value of the loss</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[torch.Tensor, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.icarl.Model.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.methods.icarl.Model.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used during inference, returns a tensor of model predictions
+Classification is done during inference using the nearest class mean</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 2-d float tensor of the model predictions of shape (number of samples x number of classes)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.icarl.Model.consolidate_task_knowledge">
+<code class="sig-name descname">consolidate_task_knowledge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buffer</span><span class="p">:</span> <span class="n"><a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase">lifelong_methods.buffer.buffer.BufferBase</a></span></em>, <em class="sig-param"><span class="n">device</span><span class="p">:</span> <span class="n">torch.device</span></em>, <em class="sig-param"><span class="n">batch_size</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.icarl.Model.consolidate_task_knowledge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place after training each task.
+It updates the class means based on the new set of exemplars</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffer</strong> (<a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><em>BufferBase</em></a>) – The replay buffer</p></li>
+<li><p><strong>device</strong> (<em>torch.device</em>) – The device used (cpu or gpu)</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – The batch size to be used for calculating the class mean</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="lifelong_methods.methods.icarl.Buffer">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.icarl.</code><code class="sig-name descname">Buffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">buffer_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000000000.0</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.icarl.Buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.buffer.buffer.BufferBase</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods.methods.icarl_cnn">
+<span id="lifelong-methods-methods-icarl-cnn-module"></span><h2>lifelong_methods.methods.icarl_cnn module<a class="headerlink" href="#module-lifelong_methods.methods.icarl_cnn" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.methods.icarl_cnn.Model">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.icarl_cnn.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_cla_per_tsk</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>numpy.ndarray<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">class_names_to_idx</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.icarl_cnn.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lifelong_methods.methods.base_method.BaseMethod" title="lifelong_methods.methods.base_method.BaseMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.methods.base_method.BaseMethod</span></code></a></p>
+<p>An  implementation of modified version of iCaRL that doesn’t use the nearest class mean during inference</p>
+<dl class="py method">
+<dt id="lifelong_methods.methods.icarl_cnn.Model.observe">
+<code class="sig-name descname">observe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">in_buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>torch.Tensor<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">train</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.icarl_cnn.Model.observe" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used for training and validation, returns a tensor of model predictions and the loss
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p></li>
+<li><p><strong>y</strong> (<em>torch.Tensor</em>) – A 2-d batch indicator tensor of shape (number of samples x number of classes)</p></li>
+<li><p><strong>in_buffer</strong> (<em>Optional</em><em>[</em><em>torch.Tensor</em><em>]</em>) – A 1-d boolean tensor which indicates which sample is from the buffer.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – Whether this is training or validation/test</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predictions (torch.Tensor) : a 2-d float tensor of the model predictions of shape (number of samples x number of classes)
+loss (float): the value of the loss</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[torch.Tensor, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.icarl_cnn.Model.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.methods.icarl_cnn.Model.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used during inference, returns a tensor of model predictions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 2-d float tensor of the model predictions of shape (number of samples x number of classes)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.icarl_cnn.Model.consolidate_task_knowledge">
+<code class="sig-name descname">consolidate_task_knowledge</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.icarl_cnn.Model.consolidate_task_knowledge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place after training on each task</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="lifelong_methods.methods.icarl_cnn.Buffer">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.icarl_cnn.</code><code class="sig-name descname">Buffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">buffer_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000000000.0</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.icarl_cnn.Buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.buffer.buffer.BufferBase</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods.methods.icarl_norm">
+<span id="lifelong-methods-methods-icarl-norm-module"></span><h2>lifelong_methods.methods.icarl_norm module<a class="headerlink" href="#module-lifelong_methods.methods.icarl_norm" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.methods.icarl_norm.Model">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.icarl_norm.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_cla_per_tsk</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>numpy.ndarray<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">class_names_to_idx</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.icarl_norm.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lifelong_methods.methods.base_method.BaseMethod" title="lifelong_methods.methods.base_method.BaseMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.methods.base_method.BaseMethod</span></code></a></p>
+<dl class="simple">
+<dt>An  implementation of modified version of iCaRL that doesn’t use the nearest class mean during inference, and the</dt><dd><p>the output layer with a cosine similarity layer (where the weights and features are normalized before applying
+the dot product)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="lifelong_methods.methods.icarl_norm.Model.observe">
+<code class="sig-name descname">observe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">in_buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>torch.Tensor<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">train</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.icarl_norm.Model.observe" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used for training and validation, returns a tensor of model predictions and the loss
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p></li>
+<li><p><strong>y</strong> (<em>torch.Tensor</em>) – A 2-d batch indicator tensor of shape (number of samples x number of classes)</p></li>
+<li><p><strong>in_buffer</strong> (<em>Optional</em><em>[</em><em>torch.Tensor</em><em>]</em>) – A 1-d boolean tensor which indicates which sample is from the buffer.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – Whether this is training or validation/test</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predictions (torch.Tensor) : a 2-d float tensor of the model predictions of shape (number of samples x number of classes)
+loss (float): the value of the loss</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[torch.Tensor, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.icarl_norm.Model.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.methods.icarl_norm.Model.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used during inference, returns a tensor of model predictions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 2-d float tensor of the model predictions of shape (number of samples x number of classes)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.icarl_norm.Model.consolidate_task_knowledge">
+<code class="sig-name descname">consolidate_task_knowledge</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.icarl_norm.Model.consolidate_task_knowledge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place after training each task</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="lifelong_methods.methods.icarl_norm.Buffer">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.icarl_norm.</code><code class="sig-name descname">Buffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">buffer_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000000000.0</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.icarl_norm.Buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.buffer.buffer.BufferBase</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods.methods.lucir">
+<span id="lifelong-methods-methods-lucir-module"></span><h2>lifelong_methods.methods.lucir module<a class="headerlink" href="#module-lifelong_methods.methods.lucir" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.methods.lucir.Model">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.lucir.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_cla_per_tsk</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>numpy.ndarray<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">class_names_to_idx</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.lucir.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lifelong_methods.methods.base_method.BaseMethod" title="lifelong_methods.methods.base_method.BaseMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.methods.base_method.BaseMethod</span></code></a></p>
+<dl class="simple">
+<dt>An  implementation of LUCIR from</dt><dd><p>Saihui Hou, Xinyu Pan, Chen Change Loy, Zilei Wang, and Dahua Lin.
+Learning a Unified Classifier Incrementally via Rebalancing.
+CVPR, 2019.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="lifelong_methods.methods.lucir.Model.observe">
+<code class="sig-name descname">observe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">in_buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>torch.Tensor<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">train</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.lucir.Model.observe" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used for training and validation, returns a tensor of model predictions and the loss
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p></li>
+<li><p><strong>y</strong> (<em>torch.Tensor</em>) – A 2-d batch indicator tensor of shape (number of samples x number of classes)</p></li>
+<li><p><strong>in_buffer</strong> (<em>Optional</em><em>[</em><em>torch.Tensor</em><em>]</em>) – A 1-d boolean tensor which indicates which sample is from the buffer.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – Whether this is training or validation/test</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predictions (torch.Tensor) : a 2-d float tensor of the model predictions of shape (number of samples x number of classes)
+loss (float): the value of the loss</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[torch.Tensor, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.lucir.Model.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.methods.lucir.Model.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used during inference, returns a tensor of model predictions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 2-d float tensor of the model predictions of shape (number of samples x number of classes)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.lucir.Model.consolidate_task_knowledge">
+<code class="sig-name descname">consolidate_task_knowledge</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.lucir.Model.consolidate_task_knowledge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place after training on each task</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="lifelong_methods.methods.lucir.Buffer">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.lucir.</code><code class="sig-name descname">Buffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">buffer_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000000000.0</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.lucir.Buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.buffer.buffer.BufferBase</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods.methods.mask_seen_classes">
+<span id="lifelong-methods-methods-mask-seen-classes-module"></span><h2>lifelong_methods.methods.mask_seen_classes module<a class="headerlink" href="#module-lifelong_methods.methods.mask_seen_classes" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.methods.mask_seen_classes.Model">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.mask_seen_classes.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_cla_per_tsk</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>numpy.ndarray<span class="p">, </span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">class_names_to_idx</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.mask_seen_classes.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#lifelong_methods.methods.base_method.BaseMethod" title="lifelong_methods.methods.base_method.BaseMethod"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.methods.base_method.BaseMethod</span></code></a></p>
+<p>A method that only provides feedback for the classes that belong to the task of the sample (masks other tasks
+classes when computing the loss).</p>
+<dl class="py method">
+<dt id="lifelong_methods.methods.mask_seen_classes.Model.observe">
+<code class="sig-name descname">observe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">in_buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>torch.Tensor<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">train</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>float<span class="p">]</span><a class="headerlink" href="#lifelong_methods.methods.mask_seen_classes.Model.observe" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used for training and validation, returns a tensor of model predictions and the loss
+This function needs to be defined in the inheriting method class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p></li>
+<li><p><strong>y</strong> (<em>torch.Tensor</em>) – A 2-d batch indicator tensor of shape (number of samples x number of classes)</p></li>
+<li><p><strong>in_buffer</strong> (<em>Optional</em><em>[</em><em>torch.Tensor</em><em>]</em>) – A 1-d boolean tensor which indicates which sample is from the buffer.</p></li>
+<li><p><strong>train</strong> (<em>bool</em>) – Whether this is training or validation/test</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>predictions (torch.Tensor) : a 2-d float tensor of the model predictions of shape (number of samples x number of classes)
+loss (float): the value of the loss</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[torch.Tensor, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.mask_seen_classes.Model.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.methods.mask_seen_classes.Model.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method used during inference, returns a tensor of model predictions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.Tensor</em>) – The batch of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a 2-d float tensor of the model predictions of shape (number of samples x number of classes)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="lifelong_methods.methods.mask_seen_classes.Model.consolidate_task_knowledge">
+<code class="sig-name descname">consolidate_task_knowledge</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.methods.mask_seen_classes.Model.consolidate_task_knowledge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes place after training on each task</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="lifelong_methods.methods.mask_seen_classes.Buffer">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.methods.mask_seen_classes.</code><code class="sig-name descname">Buffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">buffer_dir</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000000000.0</span></em>, <em class="sig-param"><span class="n">essential_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">augmentation_transforms_fn</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>PIL.Image.Image<span class="p">]</span><span class="p">, </span>torch.Tensor<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.methods.mask_seen_classes.Buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">lifelong_methods.buffer.buffer.BufferBase</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods.methods">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lifelong_methods.methods" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lifelong_methods.models.html" class="btn btn-neutral float-right" title="lifelong_methods.models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lifelong_methods.buffer.html" class="btn btn-neutral float-left" title="lifelong_methods.buffer package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Mohamed Abdelsalam, Mojtaba Faramarzi, Shagun Sodhani, Sarath Chandar (Chandar-Lab/Mila).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

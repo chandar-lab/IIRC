@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>lifelong_methods package &mdash; IIRC 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lifelong_methods.buffer package" href="lifelong_methods.buffer.html" />
+    <link rel="prev" title="iirc.utils package" href="iirc.utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IIRC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="iirc_tutorial.html">IIRC Package Tutorial Using PyTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loading_datasets_tutorial.html">Loading IIRC and incremental datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lifelong_methods_guide.html">Lifelong Learning Methods Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="iirc.html">iirc package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">lifelong_methods package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lifelong_methods.buffer.html">lifelong_methods.buffer package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifelong_methods.methods.html">lifelong_methods.methods package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lifelong_methods.models.html">lifelong_methods.models package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-lifelong_methods.utils">lifelong_methods.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-lifelong_methods">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IIRC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>lifelong_methods package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/lifelong_methods.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="lifelong-methods-package">
+<h1>lifelong_methods package<a class="headerlink" href="#lifelong-methods-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lifelong_methods.buffer.html">lifelong_methods.buffer package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.buffer.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.buffer.html#module-lifelong_methods.buffer.buffer">lifelong_methods.buffer.buffer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.buffer.html#module-lifelong_methods.buffer">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lifelong_methods.methods.html">lifelong_methods.methods package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#module-lifelong_methods.methods.agem">lifelong_methods.methods.agem module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#module-lifelong_methods.methods.base_method">lifelong_methods.methods.base_method module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#module-lifelong_methods.methods.finetune">lifelong_methods.methods.finetune module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#module-lifelong_methods.methods.icarl">lifelong_methods.methods.icarl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#module-lifelong_methods.methods.icarl_cnn">lifelong_methods.methods.icarl_cnn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#module-lifelong_methods.methods.icarl_norm">lifelong_methods.methods.icarl_norm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#module-lifelong_methods.methods.lucir">lifelong_methods.methods.lucir module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#module-lifelong_methods.methods.mask_seen_classes">lifelong_methods.methods.mask_seen_classes module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.methods.html#module-lifelong_methods.methods">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lifelong_methods.models.html">lifelong_methods.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.models.html#module-lifelong_methods.models.cosine_linear">lifelong_methods.models.cosine_linear module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.models.html#module-lifelong_methods.models.mlp">lifelong_methods.models.mlp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.models.html#module-lifelong_methods.models.resnet">lifelong_methods.models.resnet module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.models.html#module-lifelong_methods.models.resnetcifar">lifelong_methods.models.resnetcifar module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lifelong_methods.models.html#module-lifelong_methods.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-lifelong_methods.utils">
+<span id="lifelong-methods-utils-module"></span><h2>lifelong_methods.utils module<a class="headerlink" href="#module-lifelong_methods.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="lifelong_methods.utils.SubsetSampler">
+<em class="property">class </em><code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">SubsetSampler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">indices</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lifelong_methods.utils.SubsetSampler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.sampler.Sampler</span></code></p>
+<p>Samples elements in order from a given list of indices, without replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>indices</strong> (<em>sequence</em>) – a sequence of indices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.get_optimizer">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">get_optimizer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model_parameters</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>torch.nn.parameter.Parameter<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">optimizer_type</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'momentum'</span></em>, <em class="sig-param"><span class="n">lr</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">lr_gamma</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">lr_schedule</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reduce_lr_on_plateau</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">weight_decay</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.0001</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.optim.optimizer.Optimizer<span class="p">, </span>Union<span class="p">[</span>torch.optim.lr_scheduler.MultiStepLR<span class="p">, </span>torch.optim.lr_scheduler.ReduceLROnPlateau<span class="p">, </span>torch.optim.lr_scheduler.LambdaLR<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#lifelong_methods.utils.get_optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method that returns the optimizer and scheduler to be used</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_parameters</strong> (<em>Iterator</em><em>[</em><em>nn.parameter.Parameter</em><em>]</em>) – the list of model parameters</p></li>
+<li><p><strong>optimizer_type</strong> (<em>string</em>) – the optimizer type to be used (currently only “momentum” and “adam” are supported)</p></li>
+<li><p><strong>lr</strong> (<em>float</em>) – The initial learning rate for each task</p></li>
+<li><p><strong>lr_gamma</strong> (<em>float</em>) – The multiplicative factor for learning rate decay at the epochs specified</p></li>
+<li><p><strong>lr_schedule</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>int</em><em>]</em><em>]</em>) – the epochs per task at which to multiply the current learning rate by lr_gamma
+(resets after each task)</p></li>
+<li><p><strong>reduce_lr_on_plateau</strong> (<em>bool</em>) – reduce the lr on plateau based on the validation performance metric. If set to True,
+the lr_schedule is ignored</p></li>
+<li><p><strong>weight_decay</strong> (<em>float</em>) – The weight decay multiplier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>optimizer (optim.Optimizer):
+scheduler (Union[MultiStepLR, ReduceLROnPlateau, LambdaLR]):</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[optim.Optimizer, Union[MultiStepLR, ReduceLROnPlateau, LambdaLR]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.labels_index_to_one_hot">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">labels_index_to_one_hot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">length</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.utils.labels_index_to_one_hot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.l_distance">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">l_distance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_vectors</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">ref_vectors</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">p</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>float<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">2</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.utils.l_distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.contrastive_distance_loss">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">contrastive_distance_loss</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_vectors</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">ref_vectors</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">labels_one_hot</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">p</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>float<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">2</span></em>, <em class="sig-param"><span class="n">temperature</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1.0</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">]</span><a class="headerlink" href="#lifelong_methods.utils.contrastive_distance_loss" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.triplet_margin_loss">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">triplet_margin_loss</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_vectors</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">ref_vectors</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">labels_one_hot</span><span class="p">:</span> <span class="n">torch.Tensor</span></em>, <em class="sig-param"><span class="n">p</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>float<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">2</span></em>, <em class="sig-param"><span class="n">base_margin</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>torch.Tensor<span class="p">, </span>torch.Tensor<span class="p">]</span><a class="headerlink" href="#lifelong_methods.utils.triplet_margin_loss" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.get_gradient">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">get_gradient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">torch.nn.modules.module.Module</span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.utils.get_gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get current gradients of a PyTorch model.</p>
+<p>This collects ALL GRADIENTS of the model in a SINGLE VECTOR.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.update_gradient">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">update_gradient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">torch.nn.modules.module.Module</span></em>, <em class="sig-param"><span class="n">new_grad</span><span class="p">:</span> <span class="n">torch.Tensor</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.utils.update_gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite current gradient values in Pytorch model.
+This expects a SINGLE VECTOR containing all corresponding gradients for the model.
+This means that the number of elements of the vector must match the number of gradients in the model.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.transform_labels_names_to_vector">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">transform_labels_names_to_vector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels_names</span><span class="p">:</span> <span class="n">Iterable<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">num_seen_classes</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">class_names_to_idx</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>int<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; torch.Tensor<a class="headerlink" href="#lifelong_methods.utils.transform_labels_names_to_vector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.copy_freeze">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">copy_freeze</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">torch.nn.modules.module.Module</span></em><span class="sig-paren">)</span> &#x2192; torch.nn.modules.module.Module<a class="headerlink" href="#lifelong_methods.utils.copy_freeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a copy of the model, with all the parameters frozer (requires_grad set to False)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> (<em>nn.Module</em>) – The model that needs to be copied</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The frozen model</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>nn.Module</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.save_model">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">save_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">save_file</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="p">:</span> <span class="n">Dict</span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>BaseMethod<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>BufferBase<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datasets</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="iirc.lifelong_dataset.html#iirc.lifelong_dataset.torch_dataset.Dataset" title="iirc.lifelong_dataset.torch_dataset.Dataset">iirc.lifelong_dataset.torch_dataset.Dataset</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.utils.save_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the experiment configuration and the state dicts of the model, buffer, datasets, plus any additional data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>save_file</strong> (<em>str</em>) – The checkpointing file path</p></li>
+<li><p><strong>config</strong> (<em>Dict</em>) – The config of the experiment</p></li>
+<li><p><strong>metadata</strong> (<em>Dict</em>) – The metadata of the experiment</p></li>
+<li><p><strong>model</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="lifelong_methods.methods.html#lifelong_methods.methods.base_method.BaseMethod" title="lifelong_methods.methods.base_method.BaseMethod"><em>BaseMethod</em></a><em>]</em>) – The Method object (subclass of BaseMethod) for which the state dict should
+be saved (Default: None)</p></li>
+<li><p><strong>buffer</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><em>BufferBase</em></a><em>]</em>) – The buffer object for which the state dict should be saved (Default: None)</p></li>
+<li><p><strong>datasets</strong> (<em>Optional</em><em>[</em><em>Dict</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="iirc.lifelong_dataset.html#iirc.lifelong_dataset.tensorflow_dataset.Dataset" title="iirc.lifelong_dataset.tensorflow_dataset.Dataset"><em>Dataset</em></a><em>]</em><em>]</em>) – The different dataset splits for which the state dict should be
+saved (Default: None)</p></li>
+<li><p><strong>**kwargs</strong> – Any additional key value pairs that need to be saved</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="lifelong_methods.utils.load_model">
+<code class="sig-prename descclassname">lifelong_methods.utils.</code><code class="sig-name descname">load_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">checkpoint</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Dict<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">model</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>BaseMethod<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">buffer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>BufferBase<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datasets</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">[</span>str<span class="p">, </span><a class="reference internal" href="iirc.lifelong_dataset.html#iirc.lifelong_dataset.torch_dataset.Dataset" title="iirc.lifelong_dataset.torch_dataset.Dataset">iirc.lifelong_dataset.torch_dataset.Dataset</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#lifelong_methods.utils.load_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the state dicts of the model, buffer and datasets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>checkpoint</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>Dict</em><em>]</em>) – A dictionary of the state dictionaries</p></li>
+<li><p><strong>model</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="lifelong_methods.methods.html#lifelong_methods.methods.base_method.BaseMethod" title="lifelong_methods.methods.base_method.BaseMethod"><em>BaseMethod</em></a><em>]</em>) – The Method object (subclass of BaseMethod) for which the state dict should
+be updated (Default: None)</p></li>
+<li><p><strong>buffer</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="lifelong_methods.buffer.html#lifelong_methods.buffer.buffer.BufferBase" title="lifelong_methods.buffer.buffer.BufferBase"><em>BufferBase</em></a><em>]</em>) – The buffer object for which the state dict should be updated (Default: None)</p></li>
+<li><p><strong>datasets</strong> (<em>Optional</em><em>[</em><em>Dict</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="iirc.lifelong_dataset.html#iirc.lifelong_dataset.tensorflow_dataset.Dataset" title="iirc.lifelong_dataset.tensorflow_dataset.Dataset"><em>Dataset</em></a><em>]</em><em>]</em>) – The different dataset splits for which the state dict should be
+updated (Default: None)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-lifelong_methods">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lifelong_methods" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lifelong_methods.buffer.html" class="btn btn-neutral float-right" title="lifelong_methods.buffer package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="iirc.utils.html" class="btn btn-neutral float-left" title="iirc.utils package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Mohamed Abdelsalam, Mojtaba Faramarzi, Shagun Sodhani, Sarath Chandar (Chandar-Lab/Mila).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
