@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 from PIL import Image
-from iirc.lll_datasets_loader import _get_dataset
+from iirc.datasets_loader import _get_dataset
 
 # Test that the output dataset have the specified shape (image/image_path, (label1,)) or
 # (image/image_path, (label1, label2))

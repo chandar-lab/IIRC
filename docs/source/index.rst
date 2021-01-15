@@ -10,16 +10,16 @@ Welcome to IIRC's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-Guides:
+Guide:
 ======
 .. toctree::
    :maxdepth: 2
 
    iirc_tutorial
-   lll_methods_guide
+   lifelong_methods_guide
 
-Packages:
-=========
+Documentation:
+==============
 .. toctree::
    :maxdepth: 2
 

@@ -1,8 +1,3 @@
-/experiments_scheduler/submitit_experiments_scheduler.py
-/iirc/_tasks_creator.py
-/data/cifar-100-python/
-/data/cifar-100-python.tar.gz
-/experiments_scheduler/check_experiments.py
-/experiments_scheduler/configurations_test.json
-/experiments_scheduler/configurations_unified_reproduce.json
-/experiments_scheduler/experiments_scheduler.py
+/experiments/experiments_configurations/cluster_experiments_scheduler.py
+/experiments/data/cifar-100-python/
+/experiments/data/cifar-100-python.tar.gz

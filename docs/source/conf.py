@@ -39,8 +39,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['*utility*', '*main*', '*train*', '*createe_confusion*', '*experiments_scheduler*', '*tests*',
-                    '*_tasks_creator*', '*_layouts*']
+exclude_patterns = ['*experiments*', '*tests*', '*_layouts*']
 
 # -- Options for HTML output -------------------------------------------------
 
