@@ -311,6 +311,8 @@ if __name__ == '__main__':
     parser.add_argument('--run_id', type=int, default=None)
     parser.add_argument('--temperature', type=float, default=1)
     parser.add_argument('--n_layers', type=int, default=32)
+    parser.add_argument('--num_workers', type=int, default=6,
+                        help="Number of workers used to fetch the data for the dataloader")
     parser.add_argument('--group', type=str, default="main",
                         help="The parent folder of the experiment results, so as to group related experiments easily")
     # Parameters for creating the tasks
@@ -388,7 +390,6 @@ if __name__ == '__main__':
                         help='node rank for distributed training')
 
     args = parser.parse_args()
-    args.num_workers = 6
 
     config = prepare_config(args)
     if "iirc" in config["dataset"]:

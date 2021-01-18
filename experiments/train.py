@@ -55,9 +55,6 @@ def epoch_train(model, dataloader, config, metadata, gpu=None, rank=0):
             print_msg(
                 f"rank {rank}, max memory allocated: {torch.cuda.max_memory_allocated() / 1024 / 1024} MB, "
                 f"current memory allocated: {torch.cuda.memory_allocated() / 1024 / 1024} MB\n")
-        # if minibatch_i % 100 == 0:
-        #     print_msg(
-        #         f"rank {rank}, minibatch {minibatch_i}, modified_jaccard = {train_metrics['modified_jaccard'] / data_len}")
         minibatch_i += 1
 
     train_loss /= data_len

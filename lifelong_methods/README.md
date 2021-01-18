@@ -27,7 +27,7 @@ for task in tasks:
     predictions = example_model(inference_data_batch)
 ```
 
-This is the typical order of how things flow in a lifelong learning scenario, and how does this package handle 
+This is the typical order of how things flow in a lifelong learning scenario, and how does this package handles 
 that. This order makes it easy to implement new methods with shared base, so that they can run using the same code and 
 experimenting can be fast
 
