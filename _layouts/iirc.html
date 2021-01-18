@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Lifelong learning&nbsp;IIRC, class incremental learning, continual learning, benchmarck, deep learning, IIRC: Incremental Implicitly-Refined Classification">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>iirc</title>
+    <link rel="stylesheet" href="main.css" media="screen">
+<link rel="stylesheet" href="iirc.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="main.js" defer=""></script>
+    
+    
+    
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "ChanndarLab",
+		"name": "",
+		"url": "iirc.html",
+		"logo": "#"
+}</script>
+    <meta property="og:title" content="iirc">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#73a3de">
+    <link rel="canonical" href="iirc.html">
+    <meta property="og:url" content="iirc.html">
+  </head>
+  <body class="u-backlink-hidden u-body"> 
+    <section class="u-clearfix u-image u-typography-Normal--Introduction u-white u-section-1" src="" id="sec-2984">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-left u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-similar-fill u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h1 class="u-text u-text-white u-text-1">IIRC: Incremental Implicitly-Refined Classification</h1>
+            <p class="u-text u-text-white u-text-2">A setup and benchmark to evaluate lifelong learning models in more real-life aligned scenarios.</p>
+          </div>
+        </div>
+        <div class="u-list u-repeater u-list-1">
+          <div class="u-align-center u-container-style u-custom-color-2 u-list-item u-opacity u-opacity-0 u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-icon u-icon-circle u-text-black u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512.013 512.013" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e3ee"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.013 512.013" id="svg-e3ee"><g><g><path d="m508.437 296.851c-1.071-4.506-5.097-7.686-9.729-7.686-13.617 0-38.048-6.781-58.708-15.76v-43.395c0-16.542-13.458-30-30-30h-20v-180.005c0-11.028-8.972-20-20-20h-300c-11.028 0-20 8.972-20 20v120.005h-30c-11.028 0-20 8.972-20 20v290.001c0 16.542 13.458 30 30 30h324.815c11.763 10.871 25.703 21.246 42.23 30.681 1.536.877 3.247 1.315 4.958 1.315s3.421-.439 4.958-1.315c69.205-39.506 93.157-95.484 101.064-135.487 8.547-43.242.748-76.94.412-78.354zm-438.437-276.846h300v180.005h-173.229l-16.762-41.904c-4.397-10.993-14.557-18.097-25.883-18.097h-84.126zm-50 430.006v-10.001h51.996c5.523 0 10-4.477 10-10s-4.477-10-10-10h-51.996v-260h134.126c3.526 0 6.214 2.774 7.314 5.524l19.277 48.19c1.519 3.797 5.196 6.286 9.285 6.286h220c5.514 0 10 4.486 10 10v33.151c-4.433-2.744-8.201-5.53-10.967-8.266-3.896-3.853-10.166-3.853-14.063 0-16.401 16.218-67.452 34.269-89.675 34.269-4.631 0-8.657 3.18-9.729 7.686-.336 1.414-8.135 35.112.413 78.354 4.886 24.721 15.907 55.542 39.941 84.807h-305.922c-5.514 0-10-4.486-10-10zm468.404-78.685c-9.983 50.501-39.038 90.54-86.402 119.088-47.102-28.392-76.104-68.164-86.243-118.294-5.673-28.053-3.625-52.039-1.985-63.479 25.801-2.903 66.551-17.472 88.229-33.571 21.682 16.103 62.445 30.674 88.246 33.573 1.634 11.289 3.662 34.821-1.845 62.683z"></path><path d="m106.501 60.006h226.999c5.523 0 10-4.477 10-10s-4.477-10-10-10h-226.999c-5.523 0-10 4.477-10 10s4.477 10 10 10z"></path><path d="m343.5 90.006c0-5.523-4.477-10-10-10h-226.999c-5.523 0-10 4.477-10 10s4.477 10 10 10h226.999c5.522 0 10-4.477 10-10z"></path><path d="m333.5 120.006h-113.5c-5.523 0-10 4.477-10 10s4.477 10 10 10h113.5c5.523 0 10-4.477 10-10s-4.478-10-10-10z"></path><path d="m333.5 160.006h-59c-5.523 0-10 4.477-10 10s4.477 10 10 10h59c5.523 0 10-4.477 10-10s-4.478-10-10-10z"></path><path d="m439.358 327.603c-8.013 0-15.546 3.121-21.212 8.787l-27.6 27.6-4.69-4.69c-5.666-5.666-13.199-8.786-21.212-8.786s-15.546 3.121-21.211 8.786c-5.666 5.666-8.787 13.199-8.787 21.212s3.121 15.546 8.786 21.212l25.902 25.902c5.848 5.848 13.53 8.771 21.211 8.771s15.364-2.924 21.212-8.771l48.812-48.812c11.696-11.696 11.696-30.728 0-42.423-5.664-5.667-13.197-8.788-21.211-8.788zm7.07 37.067-48.811 48.812c-3.898 3.898-10.241 3.897-14.139 0l-25.902-25.902c-1.889-1.888-2.928-4.399-2.928-7.069 0-2.671 1.04-5.181 2.928-7.069 1.888-1.889 4.399-2.928 7.069-2.928s5.181 1.04 7.069 2.928l11.761 11.761c1.875 1.875 4.419 2.929 7.071 2.929s5.196-1.054 7.071-2.929l34.671-34.671c1.888-1.889 4.399-2.928 7.069-2.928 2.671 0 5.181 1.04 7.069 2.928 3.9 3.898 3.9 10.24.002 14.138z"></path><path d="m116.993 420.01c-5.523 0-10 4.477-10 10s4.477 10 10 10h.007c5.523 0 9.997-4.477 9.997-10s-4.481-10-10.004-10z"></path>
+</g>
+</g></svg></span>
+              <h5 class="u-text u-text-default u-text-3">
+                <a class="u-btn u-button-link u-button-style u-none u-text-black u-btn-1" href="https://iirc.readthedocs.io/en/latest/">
+                  <span style="font-size: 1.625rem;">IIRC Package Documentation</span>
+                </a>
+              </h5>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-custom-color-2 u-list-item u-opacity u-opacity-0 u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-icon u-icon-circle u-text-black u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 24 24" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-cd4f"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 24 24" id="svg-cd4f"><path d="m12 .5c-6.63 0-12 5.28-12 11.792 0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56 4.801-1.548 8.236-5.97 8.236-11.173 0-6.512-5.373-11.792-12-11.792z"></path></svg></span>
+              <h5 class="u-text u-text-default u-text-4">
+                <a class="u-btn u-button-link u-button-style u-none u-text-black u-btn-2" href="https://github.com/chandar-lab/IIRC">
+                  <span style="font-size: 1.625rem;">Source Code</span>
+                </a>
+              </h5>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-custom-color-2 u-list-item u-opacity u-opacity-0 u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-icon u-icon-circle u-text-black u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 511.999 511.999" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6759"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 511.999 511.999" x="0px" y="0px" id="svg-6759" style="enable-background:new 0 0 511.999 511.999;"><g><g><path d="M359.983,130.296H200.219c-4.145,0-7.505,3.36-7.505,7.505c0,4.145,3.36,7.505,7.505,7.505h159.763    c4.145,0,7.506-3.36,7.506-7.505C367.488,133.655,364.128,130.296,359.983,130.296z"></path>
+</g>
+</g><g><g><path d="M165.297,130.296h-25.306c-4.145,0-7.505,3.36-7.505,7.505c0,4.145,3.359,7.505,7.505,7.505h25.306    c4.145,0,7.505-3.36,7.505-7.505C172.802,133.656,169.442,130.296,165.297,130.296z"></path>
+</g>
+</g><g><g><path d="M218.49,360.341h-78.499c-4.145,0-7.505,3.36-7.505,7.505c0,4.146,3.36,7.505,7.505,7.505h78.499    c4.145,0,7.505-3.36,7.505-7.505C225.995,363.7,222.635,360.341,218.49,360.341z"></path>
+</g>
+</g><g><g><path d="M249.987,283.66H139.991c-4.145,0-7.505,3.36-7.505,7.505c0,4.146,3.36,7.505,7.505,7.505h109.996    c4.144,0,7.505-3.36,7.505-7.505C257.492,287.019,254.132,283.66,249.987,283.66z"></path>
+</g>
+</g><g><g><path d="M303.53,206.977H139.991c-4.145,0-7.505,3.36-7.505,7.505s3.36,7.505,7.505,7.505H303.53    c4.145,0.001,7.505-3.359,7.505-7.505S307.675,206.977,303.53,206.977z"></path>
+</g>
+</g><g><g><path d="M445.564,53.51h-310.17c-27.474,0-49.825,22.352-49.825,49.826V398.64H7.504c-2.003,0-3.924,0.801-5.333,2.224    c-1.41,1.424-2.192,3.352-2.171,5.355c0.296,29.8,21.711,52.271,49.813,52.271h310.17h0.945c27.474,0,49.825-22.352,49.825-49.826    v-90.943c0-4.145-3.361-7.504-7.506-7.504c-4.145,0-7.505,3.36-7.505,7.505v90.943c0,19.198-15.618,34.815-34.814,34.815h-0.945    c-19.629,0-34.591-16.083-34.803-37.409c-0.041-4.116-3.389-7.431-7.505-7.431H100.583V103.335    c0-19.198,15.618-34.815,34.814-34.815h274.558c-0.22,0.225-0.428,0.461-0.644,0.691c-0.262,0.279-0.527,0.555-0.783,0.839    c-0.271,0.301-0.532,0.61-0.795,0.918c-0.253,0.295-0.508,0.587-0.754,0.888c-0.255,0.312-0.499,0.632-0.747,0.95    c-0.24,0.308-0.482,0.613-0.715,0.927c-0.238,0.322-0.466,0.651-0.697,0.979c-0.227,0.322-0.457,0.642-0.677,0.969    c-0.221,0.331-0.432,0.669-0.645,1.006c-0.213,0.335-0.429,0.667-0.634,1.007c-0.206,0.342-0.4,0.691-0.597,1.038    c-0.197,0.345-0.399,0.688-0.588,1.039c-0.19,0.351-0.366,0.71-0.547,1.067c-0.181,0.356-0.367,0.709-0.539,1.069    c-0.173,0.362-0.332,0.731-0.497,1.097c-0.164,0.365-0.333,0.727-0.488,1.096c-0.157,0.373-0.299,0.753-0.447,1.13    c-0.146,0.372-0.297,0.741-0.434,1.117c-0.141,0.386-0.266,0.779-0.397,1.17c-0.126,0.376-0.259,0.748-0.377,1.128    c-0.124,0.4-0.231,0.807-0.345,1.212c-0.106,0.378-0.22,0.753-0.318,1.135c-0.107,0.42-0.197,0.846-0.294,1.27    c-0.085,0.373-0.179,0.744-0.255,1.12c-0.09,0.441-0.161,0.887-0.239,1.332c-0.064,0.368-0.138,0.732-0.194,1.102    c-0.072,0.475-0.124,0.956-0.183,1.435c-0.042,0.346-0.095,0.688-0.13,1.036c-0.054,0.536-0.087,1.078-0.124,1.619    c-0.02,0.297-0.052,0.592-0.067,0.89c-0.042,0.841-0.064,1.688-0.064,2.54v2.519v64.093c0,4.146,3.36,7.505,7.505,7.505    s7.505-3.36,7.505-7.505V113.36h77.203c2.003,0,3.924-0.801,5.333-2.224c1.41-1.424,2.192-3.352,2.171-5.355    C495.161,75.981,473.746,53.51,445.564,53.51z M310.693,413.651c0.103,0.777,0.223,1.546,0.356,2.31    c0.044,0.256,0.098,0.507,0.146,0.762c0.095,0.505,0.19,1.01,0.298,1.508c0.064,0.299,0.137,0.593,0.205,0.889    c0.104,0.449,0.209,0.898,0.324,1.341c0.08,0.311,0.167,0.619,0.252,0.927c0.117,0.422,0.235,0.843,0.361,1.26    c0.094,0.313,0.193,0.624,0.293,0.934c0.13,0.406,0.265,0.81,0.404,1.211c0.107,0.309,0.216,0.617,0.329,0.923    c0.146,0.398,0.297,0.792,0.452,1.184c0.118,0.298,0.235,0.596,0.357,0.891c0.165,0.397,0.337,0.789,0.51,1.181    c0.124,0.281,0.247,0.563,0.376,0.841c0.19,0.41,0.39,0.814,0.589,1.217c0.124,0.25,0.243,0.502,0.371,0.75    c0.244,0.473,0.499,0.938,0.756,1.402c0.093,0.169,0.182,0.341,0.277,0.508c0.357,0.628,0.726,1.246,1.107,1.854    c0.089,0.142,0.184,0.278,0.274,0.419c0.297,0.465,0.598,0.927,0.909,1.38c0.144,0.209,0.294,0.412,0.44,0.619    c0.268,0.378,0.536,0.755,0.814,1.124c0.167,0.222,0.338,0.438,0.508,0.657c0.268,0.345,0.538,0.689,0.814,1.025    c0.182,0.221,0.367,0.439,0.552,0.657c0.276,0.326,0.556,0.648,0.84,0.966c0.191,0.214,0.385,0.425,0.58,0.635    c0.139,0.15,0.273,0.306,0.414,0.454H49.812v0c-17.224,0-30.855-12.385-34.08-29.829H310.693z M411.12,98.348    c0.003-0.051,0.008-0.104,0.015-0.156c0.034-0.229,0.076-0.456,0.115-0.683c0.054-0.32,0.109-0.64,0.172-0.958    c0.048-0.242,0.102-0.482,0.155-0.722c0.066-0.298,0.133-0.595,0.206-0.89c0.062-0.248,0.128-0.495,0.195-0.741    c0.077-0.281,0.156-0.562,0.239-0.84c0.075-0.252,0.154-0.502,0.235-0.751c0.086-0.266,0.176-0.53,0.269-0.794    c0.09-0.255,0.181-0.51,0.277-0.762c0.094-0.249,0.193-0.495,0.293-0.742c0.105-0.26,0.21-0.519,0.322-0.776    c0.099-0.229,0.204-0.455,0.308-0.681c0.123-0.267,0.245-0.536,0.374-0.799c0.096-0.196,0.199-0.388,0.299-0.582    c0.148-0.288,0.294-0.576,0.45-0.859c0.06-0.11,0.126-0.216,0.187-0.325c0.693-1.227,1.454-2.411,2.286-3.54    c0.008-0.011,0.015-0.021,0.023-0.032c0.268-0.362,0.545-0.717,0.826-1.069c0.045-0.056,0.088-0.113,0.133-0.169    c0.275-0.34,0.559-0.673,0.846-1.002c0.053-0.061,0.106-0.123,0.16-0.184c0.292-0.33,0.591-0.653,0.896-0.972    c0.05-0.052,0.099-0.105,0.15-0.157c0.316-0.326,0.638-0.647,0.966-0.961c0.037-0.035,0.074-0.07,0.111-0.106    c0.346-0.328,0.698-0.65,1.058-0.964c0.012-0.011,0.025-0.021,0.037-0.032c4.596-4.003,10.252-6.826,16.494-7.988    c0.003-0.001,0.007-0.001,0.01-0.002c0.511-0.095,1.027-0.179,1.546-0.251c0.031-0.004,0.062-0.008,0.093-0.012    c0.495-0.068,0.993-0.126,1.494-0.173c0.076-0.007,0.153-0.011,0.23-0.017c0.459-0.04,0.919-0.074,1.383-0.096    c0.268-0.012,0.538-0.014,0.808-0.021c0.29-0.007,0.579-0.02,0.871-0.02c17.224,0,30.855,12.385,34.08,29.829H411.12z"></path>
+</g>
+</g><g><g><path d="M511.992,191.831c-0.001-0.087-0.003-0.174-0.006-0.262c-0.03-0.706-0.157-1.386-0.37-2.03    c-0.01-0.032-0.014-0.065-0.025-0.096c-0.009-0.026-0.024-0.05-0.033-0.076c-0.118-0.329-0.254-0.649-0.414-0.955    c-0.02-0.038-0.043-0.073-0.063-0.111c-0.148-0.27-0.312-0.529-0.491-0.778c-0.038-0.053-0.074-0.108-0.113-0.16    c-0.197-0.26-0.411-0.506-0.64-0.738c-0.05-0.051-0.103-0.098-0.154-0.147c-0.216-0.208-0.444-0.403-0.684-0.584    c-0.032-0.024-0.062-0.051-0.095-0.075c-0.27-0.196-0.556-0.371-0.851-0.531c-0.057-0.031-0.114-0.059-0.172-0.088    c-0.301-0.152-0.609-0.291-0.932-0.402c-0.002-0.001-0.004-0.002-0.006-0.002c-0.321-0.11-0.654-0.193-0.993-0.26    c-0.075-0.015-0.15-0.028-0.226-0.04c-0.339-0.056-0.683-0.098-1.036-0.107c-62.798-1.625-144.684,13.492-186.083,60.752    c-18.118,20.683-26.478,46.923-34.562,72.298c-0.662,2.077-1.323,4.153-1.99,6.226c-0.028,0.087-0.055,0.175-0.08,0.264    l-12.684,45.049c-1.123,3.989,1.201,8.135,5.19,9.259c0.68,0.192,1.365,0.282,2.038,0.282c3.277,0,6.289-2.164,7.221-5.474    l11.764-41.782c14.381-6.74,25.961-9.892,41.603-14.145c8.114-2.208,17.311-4.708,28.44-8.131    c24.06-7.4,70.216-38.36,91.458-61.347c18.578-20.106,34.211-35.048,52.271-49.961c0.021-0.017,0.037-0.038,0.058-0.056    c0.263-0.223,0.513-0.46,0.743-0.717c0.014-0.016,0.029-0.03,0.043-0.045c0.227-0.257,0.433-0.533,0.624-0.821    c0.035-0.053,0.069-0.106,0.103-0.16c0.36-0.573,0.644-1.196,0.84-1.86c0.019-0.063,0.037-0.125,0.054-0.189    c0.087-0.326,0.159-0.658,0.202-1c0.002-0.014,0.002-0.027,0.003-0.041c0.028-0.232,0.048-0.467,0.054-0.705    C512.001,191.999,511.993,191.915,511.992,191.831z M329.897,255.031c17.469-19.943,44.244-34.976,79.582-44.68    c9.497-2.608,19.533-4.772,29.876-6.48c-26.281,12.745-51.41,28.708-65.453,38.089c-22.663,15.14-47.127,33.505-65.193,49.839    C314.055,278.257,320.518,265.738,329.897,255.031z M445.979,237.452c-20.674,22.373-65.325,51.183-84.846,57.186    c-10.894,3.35-19.964,5.818-27.967,7.994c-7.241,1.969-13.828,3.763-20.342,5.831c2.914-2.791,6.33-5.92,10.357-9.433    c16.206-14.136,37.18-29.971,59.059-44.587c37.882-25.307,72.164-43.071,97.315-50.772    C468.632,213.731,457.888,224.563,445.979,237.452z"></path>
+</g>
+</g></svg></span>
+              <h5 class="u-text u-text-default u-text-5">
+                <a class="u-btn u-button-link u-button-style u-none u-text-black u-btn-3" href="https://arxiv.org/abs/2012.12477">
+                  <span style="font-size: 1.625rem;">Paper</span>
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-black u-clearfix u-section-2" id="sec-7b1f">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-1">Overview</h2>
+        <div class="u-video u-video-1">
+          <div style="position: absolute; width: 100%; left: 0px; height: 100%; top: 0px;" class="embed-responsive">
+              <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="https://www.youtube.com/embed/FR1UIdkYi5Y?mute=0&amp;showinfo=0&amp;controls=1&amp;start=0" frameborder="0" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-3" id="sec-1f01">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-border-1 u-border-black u-line u-line-vertical u-line-1"></div>
+        <div class="u-align-left u-expanded-width-sm u-grey-light-2 u-shape u-shape-1"></div>
+        <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-similar-fill u-group-1">
+          <div class="u-container-layout u-valign-middle-md u-container-layout-1">
+            <h2 class="u-align-left u-text u-text-black u-text-1">IIRC</h2>
+            <div class="u-border-1 u-border-black u-hidden-xs u-line u-line-horizontal u-line-2"></div>
+            <p class="u-align-justify u-expanded-width-xs u-text u-text-grey-dark-3 u-text-2">We introduce the “Incremental Implicitly-Refined Classification (IIRC)” setup, an extension to the class incremental
+learning setup where the incoming batches of classes have
+two granularity levels. i.e., each sample could have a highlevel (coarse) label like “bear” and a low-level (fine) label
+like “polar bear”. Only one label is provided at a time, and
+the model has to figure out the other label if it has already
+learned it. This setup is more aligned with real-life scenarios, where a learner usually interacts with the same family
+of entities multiple times, discovers more granularity about
+them, while still trying not to forget previous knowledge.
+Moreover, this setup enables evaluating models for some
+important lifelong learning challenges that cannot be easily addressed under the existing setups. These challenges
+can be motivated by the example ”if a model was trained
+on the class bear in one task and on polar bear in another
+task, will it forget the concept of bear, will it rightfully infer that a polar bear is still a bear? and will it wrongfully
+associate the label of polar bear to other breeds of bear?”.
+We develop a standardized benchmark that enables evaluating models on the IIRC setup. We evaluate several stateof-the-art lifelong learning algorithms and highlight their
+strengths and limitations. For example, distillation-based
+methods perform relatively well but are prone to incorrectly
+predicting too many labels per image. We hope that the
+proposed setup, along with the benchmark, would provide a
+meaningful problem setting to the practitioners.</p>
+          </div>
+        </div>
+        <div class="u-border-1 u-border-black u-line u-line-vertical u-line-3"></div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-white u-section-4" id="sec-5b15">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-tab-links-align-justify u-tabs u-tabs-1">
+          <ul class="u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item" role="presentation">
+              <a class="active u-active-white u-button-style u-grey-25 u-hover-white u-tab-link u-tab-link-1" id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="true">ImageNet</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-button-style u-grey-25 u-hover-white u-tab-link u-tab-link-2" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="false">CIFAR100</a>
+            </li>
+          </ul>
+          <div class="u-tab-content">
+            <div class="u-container-style u-tab-active u-tab-pane u-white u-tab-pane-1" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
+              <div class="u-container-layout u-container-layout-1">
+                <p class="u-text u-text-1"> Average performance using the precision-weighted Jaccard Similarity on IIRC-Imagenet-lite and IIRC-Imagenet-full setups.
+We run experiments on five different task configurations and report the mean and standard deviation.</p>
+                <div id="carousel-ec2e" data-interval="5000" data-u-ride="carousel" class="u-carousel u-expanded-width-sm u-expanded-width-xs u-slider u-slider-1">
+                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+                    <li data-u-target="#carousel-ec2e" class="u-active u-grey-30" data-u-slide-to="0"></li>
+                    <li data-u-target="#carousel-ec2e" class="u-grey-30" data-u-slide-to="1"></li>
+                  </ol>
+                  <div class="u-carousel-inner" role="listbox">
+                    <div class="u-active u-align-center-md u-align-center-sm u-align-center-xs u-carousel-item u-container-style u-slide">
+                      <div class="u-container-layout u-container-layout-2">
+                        <img class="u-expand-resize u-image u-image-1" src="images/iirc-imagennet-lite.png">
+                      </div>
+                    </div>
+                    <div class="u-carousel-item u-container-style u-expanded-width u-slide">
+                      <div class="u-container-layout u-container-layout-3">
+                        <img alt="" class="u-image u-image-default u-image-2" src="images/iirc-imagenet-full.png">
+                      </div>
+                    </div>
+                  </div>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-12 u-text-grey-30 u-carousel-control-1" href="#carousel-ec2e" role="button" data-u-slide="prev">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+                    </span>
+                    <span class="sr-only">+Previous</span>
+                  </a>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-12 u-text-grey-30 u-carousel-control-2" href="#carousel-ec2e" role="button" data-u-slide="next">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+                    </span>
+                    <span class="sr-only">+Next</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-tab-pane u-white u-tab-pane-2" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
+              <div class="u-container-layout u-container-layout-4">
+                <p class="u-text u-text-2"> Average performance on IIRC-CIFAR with the precision-weighted Jaccard Similarity and the Jaccard Similarity. We
+run experiments ten times using ten different task configurations to report the performance with the mean and the standard deviation.</p>
+                <div id="carousel-dd63" data-interval="5000" data-u-ride="carousel" class="u-carousel u-expanded-width-sm u-expanded-width-xs u-slider u-slider-2">
+                  <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-2">
+                    <li data-u-target="#carousel-dd63" class="u-active u-grey-30" data-u-slide-to="0"></li>
+                    <li data-u-target="#carousel-dd63" class="u-grey-30" data-u-slide-to="1"></li>
+                  </ol>
+                  <div class="u-carousel-inner" role="listbox">
+                    <div class="u-active u-align-center-md u-align-center-sm u-align-center-xs u-carousel-item u-container-style u-slide">
+                      <div class="u-container-layout u-container-layout-5">
+                        <img class="u-expand-resize u-image u-image-3" src="images/ciraf_1.png">
+                      </div>
+                    </div>
+                    <div class="u-carousel-item u-container-style u-expanded-width u-slide">
+                      <div class="u-container-layout u-container-layout-6">
+                        <img alt="" class="u-image u-image-default u-image-4" src="images/cifar_2.png">
+                      </div>
+                    </div>
+                  </div>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-12 u-text-grey-30 u-carousel-control-3" href="#carousel-dd63" role="button" data-u-slide="prev">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+                    </span>
+                    <span class="sr-only">+Previous</span>
+                  </a>
+                  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-12 u-text-grey-30 u-carousel-control-4" href="#carousel-dd63" role="button" data-u-slide="next">
+                    <span aria-hidden="true">
+                      <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+                    </span>
+                    <span class="sr-only">+Next</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="u-text u-text-default u-text-3">You can find further detail and more experimmental result in the paper.&nbsp;&nbsp;</p>
+        <a href="https://arxiv.org/abs/2012.12477" class="u-active-none u-border-2 u-border-palette-2-light-1 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-text-body-color u-btn-1">learn more</a>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-5" id="sec-9ac7">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-6 u-border-palette-1-base u-line u-line-horizontal u-line-1"></div>
+        <div class="u-expanded-width u-list u-repeater u-list-1">
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+              <div alt="" class="u-image u-image-circle u-image-1" src=""></div>
+              <h5 class="u-text u-text-1">Mohamed Abdelsalam </h5>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+              <div alt="" class="u-image u-image-circle u-image-2" src=""></div>
+              <h5 class="u-text u-text-2">Mojtaba Faramarzi</h5>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+              <div alt="" class="u-image u-image-circle u-image-3" src=""></div>
+              <h5 class="u-text u-text-3">Shagun Sodhani</h5>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+              <div alt="" class="u-image u-image-circle u-image-4" src=""></div>
+              <h5 class="u-text u-text-4">Sarath chandar<br>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-6" id="sec-3547">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-disable-padding u-expanded-width-xs u-gutter-40 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-image u-image-contain u-layout-cell u-left-cell u-size-15 u-image-1">
+                <div class="u-container-layout" src=""></div>
+              </div>
+              <div class="u-align-left u-container-style u-image u-image-contain u-layout-cell u-size-15 u-image-2">
+                <div class="u-container-layout" src=""></div>
+              </div>
+              <div class="u-align-left u-container-style u-image u-image-contain u-layout-cell u-size-15 u-image-3">
+                <div class="u-container-layout u-container-layout-3" src=""></div>
+              </div>
+              <div class="u-align-left u-container-style u-image u-image-contain u-layout-cell u-size-15 u-image-4" data-image-width="310" data-image-height="56">
+                <div class="u-container-layout" src=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-black u-clearfix u-footer" id="sec-d375"><div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-left u-border-1 u-border-white u-expanded-width u-line u-line-horizontal u-opacity u-opacity-30 u-line-1"></div>
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left-md u-align-left-xl u-container-style u-layout-cell u-size-20 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1"></div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-size-20 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <p class="u-small-text u-text u-text-variant u-text-1">
+                    <a href="https://github.com/chandar-lab/IIRC" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">IIRC</a>&nbsp;is maintained by&nbsp;<a href="https://chandar-lab.github.io/" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Chandar Research Lab</a>.
+                  </p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
+                <div class="u-container-layout u-container-layout-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></footer>
+  </body>
+</html>

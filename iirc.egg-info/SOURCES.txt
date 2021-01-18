@@ -1,5 +1,8 @@
+LICENSE
+MANIFEST.in
 README.md
 setup.py
+iirc/README.md
 iirc/__init__.py
 iirc/datasets_loader.py
 iirc/definitions.py
