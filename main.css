@@ -4,7 +4,7 @@
  * Copyright 2014-2020 Froala Labs
  */
 
-.fr-clearfix::after {
+ .fr-clearfix::after {
   clear: both;
   display: block;
   content: "";
@@ -31605,15 +31605,6 @@ a.u-link.u-text-hover-grey-90:hover {
   min-height: 132px;
 }
 
-.u-footer .u-image-1 {
-  margin: 0 auto;
-}
-
-.u-footer .u-logo-image-1 {
-  max-width: 80px;
-  max-height: 80px;
-}
-
 .u-footer .u-line-1 {
   transform-origin: left center 0px;
   height: 1px;
@@ -31673,11 +31664,6 @@ a.u-link.u-text-hover-grey-90:hover {
     min-height: 273px;
   }
 
-  .u-footer .u-image-1 {
-    width: 66px;
-    height: 40px;
-  }
-
   .u-footer .u-line-1 {
     margin-right: initial;
     margin-left: initial;
@@ -31717,11 +31703,14 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 @media (max-width: 991px) {
   .u-footer .u-sheet-1 {
-    min-height: 364px;
+    min-height: 293px;
   }
 
-  .u-footer .u-image-1 {
-    width: 51px;
+  .u-footer .u-line-1 {
+    margin-top: 0;
+    width: auto;
+    margin-right: initial;
+    margin-left: initial;
   }
 
   .u-footer .u-layout-cell-1 {
@@ -31742,6 +31731,12 @@ a.u-link.u-text-hover-grey-90:hover {
     padding-right: 19px;
   }
 
+  .u-footer .u-text-1 {
+    width: auto;
+    margin-right: -25px;
+    margin-bottom: 0;
+  }
+
   .u-footer .u-layout-cell-3 {
     min-height: 57px;
   }
@@ -31756,10 +31751,6 @@ a.u-link.u-text-hover-grey-90:hover {
     min-height: 455px;
   }
 
-  .u-footer .u-image-1 {
-    width: 47px;
-  }
-
   .u-footer .u-layout-cell-1 {
     min-height: 128px;
   }
@@ -31772,6 +31763,13 @@ a.u-link.u-text-hover-grey-90:hover {
   .u-footer .u-container-layout-2 {
     padding-left: 14px;
     padding-right: 14px;
+  }
+
+  .u-footer .u-text-1 {
+    width: 316px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .u-footer .u-layout-cell-3 {
@@ -31784,10 +31782,6 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 @media (max-width: 575px) {
-  .u-footer .u-image-1 {
-    width: 40px;
-  }
-
   .u-footer .u-layout-cell-1 {
     min-height: 81px;
   }
@@ -31800,6 +31794,10 @@ a.u-link.u-text-hover-grey-90:hover {
   .u-footer .u-container-layout-2 {
     padding-left: 9px;
     padding-right: 9px;
+  }
+
+  .u-footer .u-text-1 {
+    width: 316px;
   }
 
   .u-footer .u-layout-cell-3 {
