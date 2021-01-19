@@ -1,0 +1,14 @@
+--find-links=https://download.pytorch.org/whl/torch_stable.html
+torch==1.5.0
+torchvision==0.6.0
+numpy==1.18.5
+Pillow==7.0.0
+lmdb==1.0.0
+git+https://git@github.com/shagunsodhani/ml-logger.git@976cab1d2524ee72aef8273e6deb25c764883f3e#egg=mllogger[all]
+pytest==5.4.3
+pytest-cov==2.9.0
+sphinxcontrib-napoleon
+nbsphinx
+recommonmark
+sphinx_rtd_theme
+seaborn==0.10.1

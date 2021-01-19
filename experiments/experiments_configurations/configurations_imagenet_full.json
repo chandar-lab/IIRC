@@ -1,0 +1,383 @@
+{
+  "finetune": {
+    "active": true,
+    "run_id_key": "tasks_configuration_id",
+    "cluster_arguments": {
+      "gpus_per_node": 1,
+      "nodes": 1,
+      "time": "71:00:00"
+    },
+    "fixed_arguments": {
+      "dataset": "iirc_imagenet_full",
+      "batch_size": 128,
+      "n_layers": 50,
+      "method": "finetune",
+      "seed": 100,
+      "optimizer": "momentum",
+      "epochs_per_task": 100,
+      "checkpoint_interval": 5,
+      "lr": 0.1,
+      "lr_gamma": 0.1,
+      "lr_schedule": "-1",
+      "weight_decay": 0.00001,
+      "n_memories_per_class": 0,
+      "total_n_memories": -1,
+      "group": "iirc_imagenet_full_final"
+    },
+    "iterable_arguments": {
+      "tasks_configuration_id": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "flags": {
+      "reduce_lr_on_plateau": true,
+      "use_best_model": true,
+      "complete_info": false,
+      "incremental_joint": false,
+      "joint": false
+    }
+  },
+  "finetune_20": {
+    "active": true,
+    "run_id_key": "tasks_configuration_id",
+    "cluster_arguments": {
+      "gpus_per_node": 1,
+      "nodes": 1,
+      "time": "71:00:00"
+    },
+    "fixed_arguments": {
+      "dataset": "iirc_imagenet_full",
+      "batch_size": 128,
+      "n_layers": 50,
+      "method": "finetune",
+      "seed": 100,
+      "optimizer": "momentum",
+      "epochs_per_task": 100,
+      "checkpoint_interval": 5,
+      "lr": 0.1,
+      "lr_gamma": 0.1,
+      "lr_schedule": "-1",
+      "weight_decay": 0.00001,
+      "n_memories_per_class": 20,
+      "total_n_memories": -1,
+      "group": "iirc_imagenet_full_final"
+    },
+    "iterable_arguments": {
+      "tasks_configuration_id": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "flags": {
+      "reduce_lr_on_plateau": true,
+      "use_best_model": true,
+      "complete_info": false,
+      "incremental_joint": false,
+      "joint": false
+    }
+  },
+  "finetune_50": {
+    "active": true,
+    "run_id_key": "tasks_configuration_id",
+    "cluster_arguments": {
+      "gpus_per_node": 1,
+      "nodes": 1,
+      "time": "71:00:00"
+    },
+    "fixed_arguments": {
+      "dataset": "iirc_imagenet_full",
+      "batch_size": 128,
+      "n_layers": 50,
+      "method": "finetune",
+      "seed": 100,
+      "optimizer": "momentum",
+      "epochs_per_task": 100,
+      "checkpoint_interval": 5,
+      "lr": 0.1,
+      "lr_gamma": 0.1,
+      "lr_schedule": "-1",
+      "weight_decay": 0.00001,
+      "n_memories_per_class": 50,
+      "total_n_memories": -1,
+      "group": "iirc_imagenet_full_final"
+    },
+    "iterable_arguments": {
+      "tasks_configuration_id": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "flags": {
+      "reduce_lr_on_plateau": true,
+      "use_best_model": true,
+      "complete_info": false,
+      "incremental_joint": false,
+      "joint": false
+    }
+  },
+  "finetune_100": {
+    "active": true,
+    "run_id_key": "tasks_configuration_id",
+    "cluster_arguments": {
+      "gpus_per_node": 1,
+      "nodes": 1,
+      "time": "71:00:00"
+    },
+    "fixed_arguments": {
+      "dataset": "iirc_imagenet_full",
+      "batch_size": 128,
+      "n_layers": 50,
+      "method": "finetune",
+      "seed": 100,
+      "optimizer": "momentum",
+      "epochs_per_task": 100,
+      "checkpoint_interval": 5,
+      "lr": 0.1,
+      "lr_gamma": 0.1,
+      "lr_schedule": "-1",
+      "weight_decay": 0.00001,
+      "n_memories_per_class": 100,
+      "total_n_memories": -1,
+      "group": "iirc_imagenet_full_final"
+    },
+    "iterable_arguments": {
+      "tasks_configuration_id": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "flags": {
+      "reduce_lr_on_plateau": true,
+      "use_best_model": true,
+      "complete_info": false,
+      "incremental_joint": false,
+      "joint": false
+    }
+  },
+  "joint": {
+    "active": true,
+    "run_id_key": "tasks_configuration_id",
+    "cluster_arguments": {
+      "gpus_per_node": 4,
+      "nodes": 1,
+      "time": "71:00:00"
+    },
+    "fixed_arguments": {
+      "dataset": "iirc_imagenet_full",
+      "batch_size": 128,
+      "n_layers": 50,
+      "method": "finetune",
+      "tasks_configuration_id": -1,
+      "optimizer": "momentum",
+      "epochs_per_task": 90,
+      "checkpoint_interval": 5,
+      "lr": 0.1,
+      "lr_gamma": 0.1,
+      "lr_schedule": "-1",
+      "weight_decay": 0.00001,
+      "n_memories_per_class": 0,
+      "total_n_memories": -1,
+      "group": "iirc_imagenet_full_final"
+    },
+    "iterable_arguments": {
+      "seed": [
+        100,
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    "flags": {
+      "reduce_lr_on_plateau": true,
+      "use_best_model": true,
+      "complete_info": true,
+      "incremental_joint": false,
+      "joint": true
+    }
+  },
+  "unified_20": {
+    "active": true,
+    "run_id_key": "tasks_configuration_id",
+    "cluster_arguments": {
+      "gpus_per_node": 1,
+      "nodes": 1,
+      "time": "71:00:00"
+    },
+    "fixed_arguments": {
+      "dataset": "iirc_imagenet_full",
+      "batch_size": 128,
+      "n_layers": 50,
+      "method": "unified",
+      "seed": 100,
+      "optimizer": "momentum",
+      "epochs_per_task": 100,
+      "checkpoint_interval": 5,
+      "lr": 0.1,
+      "lr_gamma": 0.1,
+      "lr_schedule": "80 120",
+      "weight_decay": 1e-5,
+      "n_memories_per_class": 20,
+      "total_n_memories": -1,
+      "unified_lambda": 5.0,
+      "unified_margin_1": 0.5,
+      "unified_margin_2": 0.5,
+      "group": "iirc_imagenet_full_final"
+    },
+    "iterable_arguments": {
+      "tasks_configuration_id": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "flags": {
+      "reduce_lr_on_plateau": true,
+      "use_best_model": false,
+      "complete_info": false,
+      "incremental_joint": false,
+      "joint": false
+    }
+  },
+  "icarl_cnn_20": {
+    "active": true,
+    "run_id_key": "tasks_configuration_id",
+    "cluster_arguments": {
+      "gpus_per_node": 1,
+      "nodes": 1,
+      "time": "71:00:00"
+    },
+    "fixed_arguments": {
+      "dataset": "iirc_imagenet_full",
+      "batch_size": 128,
+      "n_layers": 50,
+      "method": "icarl_cnn",
+      "seed": 100,
+      "optimizer": "momentum",
+      "epochs_per_task": 100,
+      "checkpoint_interval": 5,
+      "lr": 0.5,
+      "lr_gamma": 0.1,
+      "lr_schedule": "80 120",
+      "weight_decay": 1e-5,
+      "n_memories_per_class": 20,
+      "total_n_memories": -1,
+      "group": "iirc_imagenet_full_final"
+    },
+    "iterable_arguments": {
+      "tasks_configuration_id": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "flags": {
+      "reduce_lr_on_plateau": true,
+      "use_best_model": false,
+      "complete_info": false,
+      "incremental_joint": false,
+      "joint": false
+    }
+  },
+  "icarl_norm_20": {
+    "active": true,
+    "run_id_key": "tasks_configuration_id",
+    "cluster_arguments": {
+      "gpus_per_node": 1,
+      "nodes": 1,
+      "time": "71:00:00"
+    },
+    "fixed_arguments": {
+      "dataset": "iirc_imagenet_full",
+      "batch_size": 128,
+      "n_layers": 50,
+      "method": "icarl_norm",
+      "seed": 100,
+      "optimizer": "momentum",
+      "epochs_per_task": 100,
+      "checkpoint_interval": 5,
+      "lr": 0.1,
+      "lr_gamma": 0.1,
+      "lr_schedule": "80 120",
+      "weight_decay": 1e-5,
+      "n_memories_per_class": 20,
+      "total_n_memories": -1,
+      "group": "iirc_imagenet_full_final"
+    },
+    "iterable_arguments": {
+      "tasks_configuration_id": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "flags": {
+      "reduce_lr_on_plateau": true,
+      "use_best_model": false,
+      "complete_info": false,
+      "incremental_joint": false,
+      "joint": false
+    }
+  },
+  "agem_20": {
+    "active": true,
+    "run_id_key": "tasks_configuration_id",
+    "cluster_arguments": {
+      "gpus_per_node": 1,
+      "nodes": 1,
+      "time": "71:00:00"
+    },
+    "fixed_arguments": {
+      "dataset": "iirc_imagenet_full",
+      "batch_size": 128,
+      "n_layers": 50,
+      "method": "agem",
+      "seed": 100,
+      "optimizer": "momentum",
+      "epochs_per_task": 100,
+      "checkpoint_interval": 5,
+      "lr": 0.5,
+      "lr_gamma": 0.1,
+      "lr_schedule": "80 120",
+      "weight_decay": 1e-5,
+      "n_memories_per_class": 20,
+      "total_n_memories": -1,
+      "group": "iirc_imagenet_full_final"
+    },
+    "iterable_arguments": {
+      "tasks_configuration_id": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "flags": {
+      "reduce_lr_on_plateau": true,
+      "use_best_model": false,
+      "complete_info": false,
+      "incremental_joint": false,
+      "joint": false
+    }
+  }
+}
