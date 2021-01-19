@@ -1,5 +1,5 @@
 # iirc package
-![img.png](../docs/images/task_summary.png)
+![img.png](https://raw.githubusercontent.com/chandar-lab/IIRC/master/docs/images/task_summary.png)
 
 This package provides a way for adapting the different datasets (currently supports *CIFAR-100* and *ImageNet*) to 
 the *iirc* setup and the *class incremental learning* setup, and loading them in a standardized manner.
