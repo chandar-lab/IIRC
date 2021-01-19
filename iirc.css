@@ -353,20 +353,22 @@
 }
 
 .u-section-3 .u-line-1 {
-  height: 126px;
-  transform-origin: center bottom 0px;
-  margin: 1px 0 0 auto;
+  height: 100px;
+  transform-origin: center top 0px;
+  width: 1px;
+  margin: 1px auto 0 0;
 }
 
 .u-section-3 .u-shape-1 {
   height: 479px;
   width: 603px;
-  margin: -27px 160px 0 auto;
+  margin: -1px 160px 0 auto;
 }
 
 .u-section-3 .u-group-1 {
   min-height: 621px;
   width: 663px;
+  height: auto;
   margin: -578px auto 0 0;
 }
 
@@ -384,7 +386,6 @@
 }
 
 .u-section-3 .u-line-2 {
-  position: relative;
   height: 148px;
   transform-origin: center top 0px;
   transform: rotate(359.995deg);
@@ -398,11 +399,7 @@
 
   .u-section-3 .u-line-1 {
     height: 135px;
-    transform-origin: center top 0px;
-    width: 1px;
     margin-top: 0;
-    margin-right: auto;
-    margin-left: 0;
   }
 
   .u-section-3 .u-shape-1 {
@@ -439,6 +436,7 @@
   .u-section-3 .u-line-2 {
     width: 1px;
     transform: rotate(360deg);
+    position: relative;
     margin-top: -37px;
     margin-bottom: 2px;
     margin-left: auto;
@@ -451,6 +449,7 @@
   }
 
   .u-section-3 .u-line-1 {
+    margin-top: 1px;
     margin-right: -1px;
   }
 
@@ -482,9 +481,9 @@
   .u-section-3 .u-line-2 {
     height: 131px;
     transform-origin: center bottom 0px;
-    margin-top: -73px;
-    margin-bottom: 0;
     transform: rotate(359.995deg);
+    margin-top: -73px;
+    margin-bottom: 1px;
   }
 }
 
@@ -536,6 +535,10 @@
     min-height: 1221px;
   }
 
+  .u-section-3 .u-line-1 {
+    margin-top: 0;
+  }
+
   .u-section-3 .u-shape-1 {
     position: relative;
     height: 331px;
@@ -568,6 +571,7 @@
   .u-section-3 .u-line-2 {
     height: 96px;
     margin-top: -84px;
+    margin-bottom: 0;
   }
 }.u-section-4 {
   background-image: none;
@@ -1206,7 +1210,7 @@
 .u-section-6 .u-image-3 {
   height: 183px;
   width: 183px;
-  background-image: url("https://avatars0.githubusercontent.com/u/1321193");
+  background-image: url("images/shagun1.png");
   background-position: 50% 50%;
   margin: 0 auto;
 }
