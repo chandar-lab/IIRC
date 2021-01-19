@@ -140,3 +140,4 @@ cython_debug/
 /experiments/experiments_configurations/cluster_experiments_scheduler.py
 /experiments/data/cifar-100-python/
 /experiments/data/cifar-100-python.tar.gz
+.DS_Store

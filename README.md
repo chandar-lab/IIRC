@@ -2,20 +2,21 @@
 ![img.png](https://raw.githubusercontent.com/chandar-lab/IIRC/master/docs/images/task_summary.png)
 
 This is the implementation of the [IIRC paper](https://arxiv.org/abs/2012.12477).
+IIRC is a setup and benchmark to evaluate lifelong learning models in more dynamic and real-life aligned scenarios, where the labels are changing in a dynamic way and the models have to use what they have learnt to incorporate these changes into their knowledge. Further details can be found [here](https://arxiv.org/abs/2012.12477).
 
 It contains the following two packages as well: **iirc** and **lifelong_methods** 
 
-**iirc** package is a package for adapting the different datasets (currently supports *CIFAR-100* and *ImageNet*) to 
+**iirc** is a package for adapting the different datasets (currently supports *CIFAR-100* and *ImageNet*) to 
 the *iirc* setup and the *class incremental learning* setup, and loading them in a standardized manner.
 
-**lifelong_methods** package is a package that standardizes the different stages any lifelong learning method passes by, 
+**lifelong_methods** is a package that standardizes the different stages any lifelong learning method passes by, 
 hence it provides a faster way for implementing new ideas and embedding them in the same training code as other 
 baselines, it provides as well the implementation of some of these baselines. 
 
 The documentation of these packages is available [here](https://iirc.readthedocs.io/en/latest/)
 
 [Homepage](https://chandar-lab.github.io/IIRC/) | [Paper](https://arxiv.org/abs/2012.12477) | 
-[Documentation](https://iirc.readthedocs.io/en/latest/)
+[PyPI Package](https://pypi.org/project/iirc/) | [Package Documentation](https://iirc.readthedocs.io/en/latest/)
 
 ## Running Instructions
 The starting point for running this code is experiments/main.py. 

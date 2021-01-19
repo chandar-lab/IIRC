@@ -12,12 +12,12 @@ Welcome to IIRC's documentation!
 **iirc** package is a package for adapting the different datasets (currently supports *CIFAR-100* and *ImageNet*) to
 the *iirc* setup and the *class incremental learning* setup, and loading them in a standardized manner.
 
-**lifelong_methods** package is a package that standardizes the different stages any lifelong learning method passes by,
+**lifelong_methods** is a package that standardizes the different stages any lifelong learning method passes by,
 hence it provides a faster way for implementing new ideas and embedding them in the same training code as other
 baselines, it provides as well the implementation of some of these baselines.
 
 `Project Homepage <https://chandar-lab.github.io/IIRC/>`__ | `Project Paper <https://arxiv.org/abs/2012.12477>`__ |
-`Source Code <https://github.com/chandar-lab/IIRC>`__
+`Source Code <https://github.com/chandar-lab/IIRC>`__ | `PyPI Package <https://pypi.org/project/iirc/>`__
 
 .. toctree::
    :maxdepth: 1
