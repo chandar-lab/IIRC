@@ -9,7 +9,7 @@ Welcome to IIRC's documentation!
    :width: 600
    :alt: IIRC Setup
 
-**iirc** package is a package for adapting the different datasets (currently supports *CIFAR-100* and *ImageNet*) to
+**iirc** is a package for adapting the different datasets (currently supports *CIFAR-100* and *ImageNet*) to
 the *iirc* setup and the *class incremental learning* setup, and loading them in a standardized manner.
 
 **lifelong_methods** is a package that standardizes the different stages any lifelong learning method passes by,
