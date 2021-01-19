@@ -1,5 +1,5 @@
 # IIRC: Incremental Implicitly-Refined Classification 
-![img.png](docs/images/task_summary.png)
+![img.png](https://raw.githubusercontent.com/chandar-lab/IIRC/master/docs/images/task_summary.png)
 
 This is the implementation of the [IIRC paper](https://arxiv.org/abs/2012.12477).
 
