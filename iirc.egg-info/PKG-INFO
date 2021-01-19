@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: iirc
-Version: 0.1.1
+Version: 1.0.0
 Summary: This package provides a way for adapting the different datasets (currently supports *CIFAR-100* and *ImageNet*) to  the *iirc* setup and the *class incremental learning* setup, and loading them in a standardized manner. 
 Home-page: https://chandar-lab.github.io/IIRC/
 Author: Mohamed Abdelsalam
@@ -9,7 +9,7 @@ License: MIT
 Project-URL: Documentation, https://iirc.readthedocs.io/en/latest/
 Project-URL: Source, https://github.com/chandar-lab/IIRC
 Description: # iirc package
-        ![img.png](../docs/images/task_summary.png)
+        ![img.png](https://raw.githubusercontent.com/chandar-lab/IIRC/master/docs/images/task_summary.png)
         
         This package provides a way for adapting the different datasets (currently supports *CIFAR-100* and *ImageNet*) to 
         the *iirc* setup and the *class incremental learning* setup, and loading them in a standardized manner.
@@ -18,6 +18,11 @@ Description: # iirc package
         
         [Homepage](https://chandar-lab.github.io/IIRC/) | [Paper](https://arxiv.org/abs/2012.12477) | 
         [Documentation](https://iirc.readthedocs.io/en/latest/)
+        
+        ## Installation
+        you can install this package using the following command
+        
+        ```pip install iirc```
         
         ## Dataset Downloading Instructions
         ### CIFAR-100
