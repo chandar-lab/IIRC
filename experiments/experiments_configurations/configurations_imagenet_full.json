@@ -209,7 +209,7 @@
       "joint": true
     }
   },
-  "unified_20": {
+  "lucir_20": {
     "active": true,
     "run_id_key": "tasks_configuration_id",
     "cluster_arguments": {
@@ -221,7 +221,7 @@
       "dataset": "iirc_imagenet_full",
       "batch_size": 128,
       "n_layers": 50,
-      "method": "unified",
+      "method": "lucir",
       "seed": 100,
       "optimizer": "momentum",
       "epochs_per_task": 100,
@@ -232,9 +232,9 @@
       "weight_decay": 1e-5,
       "n_memories_per_class": 20,
       "total_n_memories": -1,
-      "unified_lambda": 5.0,
-      "unified_margin_1": 0.5,
-      "unified_margin_2": 0.5,
+      "lucir_lambda": 5.0,
+      "lucir_margin_1": 0.5,
+      "lucir_margin_2": 0.5,
       "group": "iirc_imagenet_full_final"
     },
     "iterable_arguments": {
