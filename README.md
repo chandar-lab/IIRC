@@ -86,10 +86,9 @@ community, please don't hesistate to submit an issue or send a pull request.
 If you find this work useful for your research, this is the way to cite it:
 
 ```
-@article{abdelsalam2020iirc,
-  Author = {Mohamed Abdelsalam and Mojtaba Faramarzi and Shagun Sodhani and Sarath Chandar},
-  Title = {IIRC: Incremental Implicitly-Refined Classification},
-  Year = {2020},
-  arxiv = {https://arxiv.org/abs/2012.12477}
-}
+@misc{abdelsalam2021iirc,
+title = {IIRC: Incremental Implicitly-Refined Classification},
+author={Mohamed Abdelsalam and Mojtaba Faramarzi and Shagun Sodhani and Sarath Chandar},
+year={2021}, eprint={2012.12477}, archivePrefix={arXiv},
+primaryClass={cs.CV}}
 ```
