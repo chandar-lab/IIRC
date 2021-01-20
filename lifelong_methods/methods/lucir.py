@@ -67,8 +67,8 @@ class Model(BaseMethod):
             state_dicts (Dict[str, Dict]): a dictionary with the state dictionaries of this method, the optimizer, the
             scheduler, and the values of the variables whose names are inside the self.method_variables
         """
-        assert "method_variables" in dict.keys()
-        method_variables = dict['method_variables']
+        assert "method_variables" in state_dicts.keys()
+        method_variables = state_dicts['method_variables']
         cur_task_id = method_variables["cur_task_id"]
         n_cla_per_tsk = method_variables["n_cla_per_tsk"]
         num_old_classes = int(sum(n_cla_per_tsk[: cur_task_id]))

@@ -141,3 +141,4 @@ cython_debug/
 /experiments/data/cifar-100-python/
 /experiments/data/cifar-100-python.tar.gz
 .DS_Store
+.vscode/settings.json
