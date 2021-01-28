@@ -1,4 +1,6 @@
 # Lifelong Learning Methods Guide
+The package documentation is [here](https://iirc.readthedocs.io/en/latest/lifelong_methods.html)
+
 The lifelong learning methods in this package follow the following procedures
 
 ```
