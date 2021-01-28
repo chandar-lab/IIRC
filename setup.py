@@ -8,8 +8,9 @@ with open(path.join(this_directory, 'iirc', 'README.md'), encoding='utf-8') as f
 
 setup(
     name='iirc',
-    version='1.0.0',
+    version='1.0.1',
     packages=['iirc', 'iirc.utils', 'iirc.lifelong_dataset'],
+    include_package_data=True,
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://chandar-lab.github.io/IIRC/',

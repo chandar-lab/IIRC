@@ -6,3 +6,6 @@ include LICENSE*
 
 # Include setup.py
 include setup.py
+
+# Include the metadata
+include iirc/metadata/*.json
